@@ -617,7 +617,8 @@
                     of IE values that was detected by a collection task at a 
                     specific point of time. It is mandatory to include the new 
                     values and the collection timestamp in an event subject and 
-                    it is recommended to include the past values and a collection 
+                    it is recommended to include the past values
+                    and a collection 
                     timestamp that were replaced by the new IE values. Every 
                     event can also be associated with a subject-specific 
                     event-timestamp and a lastseen-timestamp that might differ 
