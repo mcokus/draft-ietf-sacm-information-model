@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="US-ASCII"?>
 
-<!DOCTYPE rfc SYSTEM "http://xml2rfc.ietf.org/authoring/rfc2629.dtd" [
+<!DOCTYPE rfc SYSTEM "https://xml2rfc.ietf.org/authoring/rfc2629.dtd" [
 <!-- One method to get references from the online citation libraries.
      There has to be one entity for each item to be referenced. 
      An alternate method (rfc include) is described in the references. -->
@@ -250,7 +250,7 @@
            <t>These tasks are defined in <xref target="I-D.ietf-sacm-terminology"/>.</t>
         </section>
         
-        <section title="Conventions used in this document">
+        <section title="Conventions Used In This Document">
             <section title="Requirements Language">
               <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
                   "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be
@@ -259,37 +259,39 @@
             <section title="Information Element Examples">
               <t>The notation used to define the SACM Information
                 Elements (IEs) is based on a customized version of  
-                the IPFIX information model syntax <xref
-                  target="RFC7012"/> which is described in <xref target="information-element-specification-template"/>. 
-                However, there are several examples presented throughout the document that use a simplified 
-                pseudo-code to illustrate the basic structure. It should be noted that while 
-                they include actual names of subjects and attributes as well as values, they 
-                are not intended to influence how corresponding SACM IEs should be defined 
-                in <xref target="information-model-elements"/>. The examples are provided for 
+                the IPFIX information model syntax. 
+                It should be noted that while examples 
+                may include actual names of information elements, they 
+                are not intended to influence how corresponding SACM IEs should be defined. The examples are provided for 
                 demonstration purposes only.</t>
             </section>
+ 
         </section>
 
-        <section title="Information Elements">
+
+        <section title="Information Elements Overview"
+            anchor="ie-overview">
           <t>The IEs defined in this document comprise the building blocks by which all SACM 
             content is composed. They are consumed and provided by SACM components on the data 
-            plane. Every Information Element has a unique label: its name. Every type of IE 
+            plane. Every Information Element has a unique label: its name. Every IE 
             defined by the SACM IM is registered as a type at the IANA registry. The Integer 
             Index of the IANA SMI number tables can be used by SACM data models.</t>
-          <section title="Context of Information Elements" anchor="context-of-information-elements">
-            <t>The IEs in this information model represent information related to assets in the following 
-              areas (based on the use cases described in <xref
-                target="RFC7632"/>):
-              <list style="symbols">
-                <t>Endpoint Management</t>
-                <t>Software Inventory Management</t>
-                <t>Hardware Inventory Management</t>
-                <t>Configuration Management</t>
-                <t>Vulnerability Management</t>
-              </list>
-            </t>
-          </section>
+          
+            <section title="Information Element Naming Convention"
+                anchor="naming-convention">
+                <t>SACM Information Elements must adhere to the following naming conventions.
+                    <list style="symbols">
+                        <t>Names SHOULD be descriptive</t>
+                        <t>Names MUST be unique within the SACM registry. Enterprise-specific names 
+                            SHOULD be prefixed with a Private Enterprise Number <xref target="PEN"/>.</t>
+                        <t>Names MUST start with lowercase letters unless it begins with a Private 
+                            Enterprise Number</t>
+                        <t>Composed names MUST use capital letters for the first letter of each part</t>
+                    </list>
+                </t>
+            </section>
           <section title="Extensibility of Information Elements">
+              
             <t>A SACM data model based on this information model MAY include additional information 
               elements that are not defined here. The labels of additional Information Elements 
               included in different SACM data models MUST NOT conflict with the labels of the 
@@ -301,59 +303,30 @@
               name space URI, or an organization name abbreviation.  
             </t>
           </section>
-        </section>
+        
 
         <section title="Structure of Information Elements" anchor="structure-of-information-elements">
           <t>There are two basic types of IEs:
             <list style="symbols">
-              <t>Attributes: an instance of an attribute type is the simplest IE structure comprised 
-                of a unique attribute name and an attribute value.</t>
-              <t>Subjects: a subject is a richer structure that has a unique subject name and one 
-                or more attributes or subjects. In essence, instances of a subject type are defined 
-                (and differentiated) by the attribute values and subjects associated with it.</t>
+                <t>Attributes: are "atomic" information elements with a unique name and a simple value. Attributes can be components of Subjects.</t>
+                <t>Subjects: are composite information elements with a unique name and are composed of attributes and/or other subjects. Every IE that is part of a subject can have a quantity associated with it (0..1, 0..*, etc.). The contents of a subject can be ordered or unordered.</t>
             </list>
           </t>
                     
-          <figure title="Example instance of an attribute and subject."
-            anchor="attribute-subject-example">
-            <artwork>                  
-      hostname = "arbutus"
-      
-      coordinates = (
-      latitude = N27.99619,
-      longitude = E86.92761
-      )      
-            </artwork>
-          </figure>
+                   <t>Subjects can be nested and the SACM IM allows for circular or
+                    recursive nesting.  The association of IEs via nesting results in a
+                    tree-like structure wherein subjects compose the root and
+                    intermediary nodes and attributes the leaves of the tree.  This
+                    semantic structure does not impose a specific structure on SACM data
+                    models regarding data in motion or data repository schemata for data
+                    at rest.</t>
+                    
+        </section>
+            <section title="Notation of Information Elements"
+                anchor="notation-of-information-elements">
           
-          <t>In general, every piece of information that enables security posture assessment or 
-            further enriches the quality of the assessment process can be associated with metadata. 
-            In the SACM IM, metadata is represented by specific subjects and is bundled with other 
-            attributes or subjects to provide additional information about them. The IM explicitly 
-            defines two kinds of metadata: 
-            <list style="symbols">
-              <t>Metadata focusing on the data origin (the SACM component that provides the 
-                information to the SACM domain)</t>
-              <t>Metadata focusing on the data source (the target endpoint that is assessed)</t>
-            </list>
-            Metadata can also include relationships that refer to other associated IEs (or SACM 
-            content in general) by using referencing labels that have to be included in the metadata 
-            of the associated IE.</t>
           
-          <t>Subjects can be nested and the SACM IM allows for circular or recursive nesting. The 
-            association of IEs via nesting results in a tree-like structure wherein subjects compose 
-            the root and intermediary nodes and attributes the leaves of the tree. This semantic 
-            structure does not impose a specific structure on SACM data models regarding data in 
-            motion or data repository schemata for data at rest.</t>
-          
-          <t>The SACM IM provides two conceptual top-level subjects that 
-             are used to ensure a homogeneous structure for SACM content 
-             and its associated metadata: SACM statements and SACM content-elements. Every set of IEs 
-             that is provided by a SACM component must provide the information contained in these two 
-             subjects although it is up to the implementer whether or not the subjects are explicitly 
-             defined in a data model.</t>
-          
-          <t>The notation the SACM IM is defined in is based on a modified 
+          <t>The notation of the SACM IM is defined below and is based on a modified 
               version of the IP Information Flow Export (IPFIX) Information 
               Model syntax described in Section 2.1 of <xref target="RFC7012"/>. 
               The customized syntax used by the SACM IM is defined below in 
@@ -441,20 +414,25 @@
                             about the Information Element.
               </artwork>
             </figure>
-            
-            <section title="Information Element Naming Convention"
-                anchor="naming-convention">
-                <t>SACM Information Elements must adhere to the following naming conventions.
-                    <list style="symbols">
-                        <t>Names SHOULD be descriptive</t>
-                        <t>Names MUST be unique within the SACM registry. Enterprise-specific names 
-                           SHOULD be prefixed with a Private Enterprise Number <xref target="PEN"/>.</t>
-                        <t>Names MUST start with lowercase letters unless it begins with a Private 
-                           Enterprise Number</t>
-                        <t>Composed names MUST use capital letters for the first letter of each part</t>
-                    </list>
+            </section>   
+            <section title="Categories" anchor="categories">
+                
+                <t>
+                    Categories are special IEs which represent a choice among multiple IEs via just one name.       
+                    A prominent example of a category is network-address.  Network-
+                    address is a category that every kind of network address is
+                    associated with, e.g. mac-address, ipv4-address, ipv6-address, or
+                    typed-network-address.  If a subject includes network-address as one
+                    of its components, any of the category members are valid to be used
+                    in its place.</t>
+                
+                <t>Another prominent example is EndpointIdentifier.  Some IEs can be
+                    used to identify (and over time re-recognize) target endpoints -
+                    those are associated with the category endpoint-identifier.
                 </t>
+                
             </section>
+        </section>
             <section title="SACM Content Elements"
                 anchor="sacm-content-elements">
                 <t>Every piece of information that is provided by a SACM component is always associated 
@@ -558,14 +536,15 @@
                 </figure>
             </section>
             
-            <section title="Relationships">
+            <section title="Relationships" anchor="relationships">
                 <t>An IE can be associated with another IE, e.g. a user-name attribute 
                     can be associated with a content-authorization subject. These 
                     references are expressed via the relationships subject, which can be 
                     included in a corresponding content-metadata subject. The 
                     relationships subject includes a list of one or more references. The 
                     SACM IM does not enforce a SACM domain to use unique identifiers as 
-                    references. Therefore, there are at least two ways to reference another 
+                    references. Therefore, there are at least two
+                    ways to reference another
                     <list style="symbols">
                         <t>The value of a reference represents a specific content-label that 
                             is unique in a SACM domain (and has to be included in the 
@@ -575,7 +554,7 @@
                             of IEs in order to identify the referenced content-element by its 
                             actual content.</t>
                     </list>  
-                </t>
+                </t> 
                 <t>It is recommended to provide unique identifiers in a SACM domain and 
                     the SACM IM provides a corresponding naming-convention as a reference 
                     in <xref target="naming-convention"/>. The alternative highlighted above summarizes a valid 
@@ -660,23 +639,8 @@
                 </figure>
             </section>
             
-            <section title="Categories" anchor="categories">
-                <t>Categories are special IEs that enable to refer to multiple 
-                    types of IE via just one name. Therefore, they are similar 
-                    to a type-choice. A prominent example of a category is 
-                    network-address. Network-address is a category that every 
-                    kind of network address is associated with, e.g. mac-address, 
-                    ipv4-address, ipv6-address, or typed-network-address. If a 
-                    subject includes network-address as one of its components, 
-                    any of the category members are valid to be used in its place.
-                </t>
-                <t>Another prominent example is EndpointIdentifier. Some IEs 
-                   can be used to identify (and over time re-recognize) target 
-                   endpoints - those are associated with the category 
-                   endpoint-identifier.
-                </t>
-            </section>
-          </section>
+
+        
         
         <section title="Abstract Data Types" anchor="abstract-data-types">
             <t>This section describes the set of valid abstract data types that 
@@ -815,7 +779,7 @@ name, hex-value, description
        
         <section title="Information Model Assets" anchor="information-model-assets">
             <t>In order to represent the Information Elements related to the areas listed 
-               in <xref target="context-of-information-elements"/>, the information model
+               in , the information model
                defines the information needs (or metadata about those information needs) 
                related to following types of assets which are defined in 
                <xref target="I-D.ietf-sacm-terminology"/> (and included below 
