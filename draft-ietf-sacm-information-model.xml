@@ -213,8 +213,7 @@
         <section title="Introduction" anchor="INTRO">
           <t>The SACM Information Model (IM) serves multiple purposes:
             <list style="symbols">
-              <t>to ensure interoperability between SACM data models that are used as transport 
-                encodings,</t>
+                <t>to ensure interoperable exchange of security posture information which is represented by different data models,</t>
               <t>to provide a standardized set of Information Elements - the SACM Vocabulary - 
                 to enable the exchange of content vital to automated security posture assessment, 
                 and</t>
@@ -225,13 +224,12 @@
           
           <t>A complete set of requirements imposed on the IM can be
             found in <xref target="I-D.ietf-sacm-requirements"/>. The 
-            SACM IM is intended to be used for standardized data exchange between SACM components 
-            (data in motion). Nevertheless, the Information Elements (IE) and their relationships 
-            defined in this document can be leveraged to create and align corresponding data models 
-            for data at rest.</t>
+            SACM IM is intended to support a standardized data
+            exchange mechanism between SACM components 
+            (data in motion).</t>
 
           <t>The information model expresses, for example, target endpoint (TE) attributes, guidance, 
-            and evaluation results. The corresponding Information Elements are consumed and produced 
+              and evaluation results metadata describing the collected posture data. The corresponding Information Elements are consumed and produced 
             by SACM components as they carry out tasks.</t>
           
           <t>The primary tasks that this information model supports (on data, control, and management 
