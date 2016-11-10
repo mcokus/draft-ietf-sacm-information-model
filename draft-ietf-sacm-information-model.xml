@@ -196,11 +196,13 @@
          keywords will be used for the search engine. -->
   
         <abstract>
-          <t>This document defines the Information Elements that are transported between SACM 
-            components and their interconnected relationships. The primary purpose of the 
-            Secure Automation and Continuous Monitoring (SACM) Information Model is to ensure 
-            the interoperability of corresponding SACM data models and addresses the use cases 
-            defined by SACM. The Information Elements and corresponding types are maintained 
+            <t>This document defines the Information Elements that are necessary for the transportation of endpoint information 
+                between Secure Automation and Continuous
+                Monitoring (SACM) components, as well as tasks carried out on the endpoint information by SACM components. The primary purpose of the 
+            SACM Information Model is to ensure 
+            the interoperable exchange of security posture information 
+             by defining the
+            structure and metadata used to exchange the posture information represented by platform and/or vendor specific collection data models. The Information Elements and corresponding types are maintained 
             as the IANA "SACM Information Elements" registry.</t>
         </abstract>
     
