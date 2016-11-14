@@ -75,13 +75,13 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   5
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   6
    2.  Conventions Used In This Document . . . . . . . . . . . . . .   7
      2.1.  Requirements Language . . . . . . . . . . . . . . . . . .   7
      2.2.  Information Element Examples  . . . . . . . . . . . . . .   7
    3.  Information Elements Overview . . . . . . . . . . . . . . . .   7
      3.1.  Information Element Naming Convention . . . . . . . . . .   7
-     3.2.  Extensibility of Information Elements . . . . . . . . . .   7
+     3.2.  Extensibility of Information Elements . . . . . . . . . .   8
      3.3.  Structure of Information Elements . . . . . . . . . . . .   8
      3.4.  Notation of Information Elements  . . . . . . . . . . . .   8
      3.5.  Categories  . . . . . . . . . . . . . . . . . . . . . . .  10
@@ -118,50 +118,50 @@ Internet-Draft           SACM Information Model           September 2016
        6.6.4.  Storage Guidance  . . . . . . . . . . . . . . . . . .  23
        6.6.5.  Evaluation Results  . . . . . . . . . . . . . . . . .  23
    7.  Information Model Elements  . . . . . . . . . . . . . . . . .  23
-     7.1.  accessPrivilegeType . . . . . . . . . . . . . . . . . . .  23
-     7.2.  accountName . . . . . . . . . . . . . . . . . . . . . . .  24
-     7.3.  administrativeDomainType  . . . . . . . . . . . . . . . .  24
-     7.4.  addressAssociationType  . . . . . . . . . . . . . . . . .  24
-     7.5.  addressMaskValue  . . . . . . . . . . . . . . . . . . . .  24
-     7.6.  addressType . . . . . . . . . . . . . . . . . . . . . . .  24
-     7.7.  addressValue  . . . . . . . . . . . . . . . . . . . . . .  25
-     7.8.  authenticator . . . . . . . . . . . . . . . . . . . . . .  25
-     7.9.  authenticationType  . . . . . . . . . . . . . . . . . . .  25
-     7.10. certificate . . . . . . . . . . . . . . . . . . . . . . .  25
-     7.11. collectionTaskType  . . . . . . . . . . . . . . . . . . .  25
-     7.12. confidence  . . . . . . . . . . . . . . . . . . . . . . .  26
-     7.13. contentAction . . . . . . . . . . . . . . . . . . . . . .  26
-     7.14. dataOrigin  . . . . . . . . . . . . . . . . . . . . . . .  26
-     7.15. dataSource  . . . . . . . . . . . . . . . . . . . . . . .  26
-     7.16. discoverer  . . . . . . . . . . . . . . . . . . . . . . .  26
-     7.17. eventType . . . . . . . . . . . . . . . . . . . . . . . .  27
-     7.18. eventThreshold  . . . . . . . . . . . . . . . . . . . . .  27
-     7.19. eventThresholdName  . . . . . . . . . . . . . . . . . . .  27
-     7.20. eventTrigger  . . . . . . . . . . . . . . . . . . . . . .  27
-     7.21. eventTrigger  . . . . . . . . . . . . . . . . . . . . . .  28
-     7.22. firmwareId  . . . . . . . . . . . . . . . . . . . . . . .  28
-     7.23. hostName  . . . . . . . . . . . . . . . . . . . . . . . .  28
-     7.24. interfaceLabel  . . . . . . . . . . . . . . . . . . . . .  28
-     7.25. ipv6AddressSubnetMask . . . . . . . . . . . . . . . . . .  29
-     7.26. ipv6AddressSubnetMaskCidrNotation . . . . . . . . . . . .  29
-     7.27. ipv6AddressValue  . . . . . . . . . . . . . . . . . . . .  29
-     7.28. ipv4AddressSubnetMask . . . . . . . . . . . . . . . . . .  29
-     7.29. ipv4AddressSubnetMaskCidrNotation . . . . . . . . . . . .  29
-     7.30. ipv4AddressValue  . . . . . . . . . . . . . . . . . . . .  29
-     7.31. layer2InterfaceType . . . . . . . . . . . . . . . . . . .  30
-     7.32. layer4PortAddress . . . . . . . . . . . . . . . . . . . .  30
-     7.33. layer4Protocol  . . . . . . . . . . . . . . . . . . . . .  30
-     7.34. locationName  . . . . . . . . . . . . . . . . . . . . . .  30
-     7.35. macAddressValue . . . . . . . . . . . . . . . . . . . . .  30
-     7.36. methodLabel . . . . . . . . . . . . . . . . . . . . . . .  31
-     7.37. methodRepository  . . . . . . . . . . . . . . . . . . . .  31
-     7.38. networkAccessLevelType  . . . . . . . . . . . . . . . . .  31
-     7.39. networkId . . . . . . . . . . . . . . . . . . . . . . . .  31
-     7.40. networkInterfaceName  . . . . . . . . . . . . . . . . . .  31
-     7.41. networkLayer  . . . . . . . . . . . . . . . . . . . . . .  32
-     7.42. networkName . . . . . . . . . . . . . . . . . . . . . . .  32
-     7.43. organizationId  . . . . . . . . . . . . . . . . . . . . .  32
-     7.44. osComponent . . . . . . . . . . . . . . . . . . . . . . .  32
+     7.1.  componentIdentifier . . . . . . . . . . . . . . . . . . .  23
+     7.2.  targetEndpointIdentifier  . . . . . . . . . . . . . . . .  23
+     7.3.  collectedData . . . . . . . . . . . . . . . . . . . . . .  24
+     7.4.  collectedDataType . . . . . . . . . . . . . . . . . . . .  24
+     7.5.  collectedDataReference  . . . . . . . . . . . . . . . . .  24
+     7.6.  accessPrivilegeType . . . . . . . . . . . . . . . . . . .  25
+     7.7.  accountName . . . . . . . . . . . . . . . . . . . . . . .  25
+     7.8.  administrativeDomainType  . . . . . . . . . . . . . . . .  25
+     7.9.  addressAssociationType  . . . . . . . . . . . . . . . . .  25
+     7.10. addressMaskValue  . . . . . . . . . . . . . . . . . . . .  25
+     7.11. addressType . . . . . . . . . . . . . . . . . . . . . . .  26
+     7.12. addressValue  . . . . . . . . . . . . . . . . . . . . . .  26
+     7.13. authenticator . . . . . . . . . . . . . . . . . . . . . .  26
+     7.14. authenticationType  . . . . . . . . . . . . . . . . . . .  26
+     7.15. certificate . . . . . . . . . . . . . . . . . . . . . . .  26
+     7.16. collectionTaskType  . . . . . . . . . . . . . . . . . . .  27
+     7.17. confidence  . . . . . . . . . . . . . . . . . . . . . . .  27
+     7.18. contentAction . . . . . . . . . . . . . . . . . . . . . .  27
+     7.19. dataOrigin  . . . . . . . . . . . . . . . . . . . . . . .  27
+     7.20. dataSource  . . . . . . . . . . . . . . . . . . . . . . .  27
+     7.21. discoverer  . . . . . . . . . . . . . . . . . . . . . . .  28
+     7.22. eventType . . . . . . . . . . . . . . . . . . . . . . . .  28
+     7.23. eventThreshold  . . . . . . . . . . . . . . . . . . . . .  28
+     7.24. eventThresholdName  . . . . . . . . . . . . . . . . . . .  28
+     7.25. eventTrigger  . . . . . . . . . . . . . . . . . . . . . .  29
+     7.26. eventTrigger  . . . . . . . . . . . . . . . . . . . . . .  29
+     7.27. firmwareId  . . . . . . . . . . . . . . . . . . . . . . .  29
+     7.28. hostName  . . . . . . . . . . . . . . . . . . . . . . . .  29
+     7.29. interfaceLabel  . . . . . . . . . . . . . . . . . . . . .  30
+     7.30. ipv6AddressSubnetMask . . . . . . . . . . . . . . . . . .  30
+     7.31. ipv6AddressSubnetMaskCidrNotation . . . . . . . . . . . .  30
+     7.32. ipv6AddressValue  . . . . . . . . . . . . . . . . . . . .  30
+     7.33. ipv4AddressSubnetMask . . . . . . . . . . . . . . . . . .  30
+     7.34. ipv4AddressSubnetMaskCidrNotation . . . . . . . . . . . .  30
+     7.35. ipv4AddressValue  . . . . . . . . . . . . . . . . . . . .  31
+     7.36. layer2InterfaceType . . . . . . . . . . . . . . . . . . .  31
+     7.37. layer4PortAddress . . . . . . . . . . . . . . . . . . . .  31
+     7.38. layer4Protocol  . . . . . . . . . . . . . . . . . . . . .  31
+     7.39. locationName  . . . . . . . . . . . . . . . . . . . . . .  31
+     7.40. macAddressValue . . . . . . . . . . . . . . . . . . . . .  32
+     7.41. methodLabel . . . . . . . . . . . . . . . . . . . . . . .  32
+     7.42. methodRepository  . . . . . . . . . . . . . . . . . . . .  32
+     7.43. networkAccessLevelType  . . . . . . . . . . . . . . . . .  32
+     7.44. networkId . . . . . . . . . . . . . . . . . . . . . . . .  33
 
 
 
@@ -170,54 +170,54 @@ Waltermire, et al.        Expires March 5, 2017                 [Page 3]
 Internet-Draft           SACM Information Model           September 2016
 
 
-     7.45. osLabel . . . . . . . . . . . . . . . . . . . . . . . . .  32
-     7.46. osName  . . . . . . . . . . . . . . . . . . . . . . . . .  33
-     7.47. osType  . . . . . . . . . . . . . . . . . . . . . . . . .  33
-     7.48. osVersion . . . . . . . . . . . . . . . . . . . . . . . .  33
-     7.49. privilegeName . . . . . . . . . . . . . . . . . . . . . .  33
-     7.50. privilegeValue  . . . . . . . . . . . . . . . . . . . . .  33
-     7.51. protocol  . . . . . . . . . . . . . . . . . . . . . . . .  34
-     7.52. publicKey . . . . . . . . . . . . . . . . . . . . . . . .  34
-     7.53. relationshipContentElementGuid  . . . . . . . . . . . . .  34
-     7.54. relationshipStatementElementGuid  . . . . . . . . . . . .  34
-     7.55. relationshipObjectLabel . . . . . . . . . . . . . . . . .  34
-     7.56. relationshipType  . . . . . . . . . . . . . . . . . . . .  35
-     7.57. roleName  . . . . . . . . . . . . . . . . . . . . . . . .  35
-     7.58. sessionStateType  . . . . . . . . . . . . . . . . . . . .  35
-     7.59. statementGuid . . . . . . . . . . . . . . . . . . . . . .  36
-     7.60. statementType . . . . . . . . . . . . . . . . . . . . . .  36
-     7.61. status  . . . . . . . . . . . . . . . . . . . . . . . . .  36
-     7.62. subAdministrativeDomain . . . . . . . . . . . . . . . . .  36
-     7.63. subInterfaceLabel . . . . . . . . . . . . . . . . . . . .  36
-     7.64. superAdministrativeDomain . . . . . . . . . . . . . . . .  37
-     7.65. superInterfaceLabel . . . . . . . . . . . . . . . . . . .  37
-     7.66. teAssessmentState . . . . . . . . . . . . . . . . . . . .  37
-     7.67. teLabel . . . . . . . . . . . . . . . . . . . . . . . . .  37
-     7.68. teId  . . . . . . . . . . . . . . . . . . . . . . . . . .  38
-     7.69. timestampType . . . . . . . . . . . . . . . . . . . . . .  38
-     7.70. WGS84Longitude  . . . . . . . . . . . . . . . . . . . . .  38
-     7.71. WGS84Latitude . . . . . . . . . . . . . . . . . . . . . .  38
-     7.72. WGS84Altitude . . . . . . . . . . . . . . . . . . . . . .  39
-     7.73. hardwareSerialNumber  . . . . . . . . . . . . . . . . . .  39
-     7.74. interfaceName . . . . . . . . . . . . . . . . . . . . . .  39
-     7.75. interfaceIndex  . . . . . . . . . . . . . . . . . . . . .  39
-     7.76. interfaceMacAddress . . . . . . . . . . . . . . . . . . .  39
-     7.77. interfaceType . . . . . . . . . . . . . . . . . . . . . .  40
-     7.78. interfaceFlags  . . . . . . . . . . . . . . . . . . . . .  40
-     7.79. networkInterface  . . . . . . . . . . . . . . . . . . . .  40
-     7.80. globallyUniqueIdentifier  . . . . . . . . . . . . . . . .  41
-     7.81. dataOrigin  . . . . . . . . . . . . . . . . . . . . . . .  41
-     7.82. dataSource  . . . . . . . . . . . . . . . . . . . . . . .  41
-     7.83. creationTimestamp . . . . . . . . . . . . . . . . . . . .  41
-     7.84. collectionTimestamp . . . . . . . . . . . . . . . . . . .  42
-     7.85. publicationTimestamp  . . . . . . . . . . . . . . . . . .  42
-     7.86. relayTimestamp  . . . . . . . . . . . . . . . . . . . . .  42
-     7.87. storageTimestamp  . . . . . . . . . . . . . . . . . . . .  42
-     7.88. type  . . . . . . . . . . . . . . . . . . . . . . . . . .  43
-     7.89. protocolIdentifier  . . . . . . . . . . . . . . . . . . .  43
-     7.90. sourceTransportPort . . . . . . . . . . . . . . . . . . .  43
-     7.91. sourceIPv4PrefixLength  . . . . . . . . . . . . . . . . .  43
-     7.92. ingressInterface  . . . . . . . . . . . . . . . . . . . .  44
+     7.45. networkInterfaceName  . . . . . . . . . . . . . . . . . .  33
+     7.46. networkLayer  . . . . . . . . . . . . . . . . . . . . . .  33
+     7.47. networkName . . . . . . . . . . . . . . . . . . . . . . .  33
+     7.48. organizationId  . . . . . . . . . . . . . . . . . . . . .  33
+     7.49. osComponent . . . . . . . . . . . . . . . . . . . . . . .  34
+     7.50. osLabel . . . . . . . . . . . . . . . . . . . . . . . . .  34
+     7.51. osName  . . . . . . . . . . . . . . . . . . . . . . . . .  34
+     7.52. osType  . . . . . . . . . . . . . . . . . . . . . . . . .  34
+     7.53. osVersion . . . . . . . . . . . . . . . . . . . . . . . .  34
+     7.54. privilegeName . . . . . . . . . . . . . . . . . . . . . .  35
+     7.55. privilegeValue  . . . . . . . . . . . . . . . . . . . . .  35
+     7.56. protocol  . . . . . . . . . . . . . . . . . . . . . . . .  35
+     7.57. publicKey . . . . . . . . . . . . . . . . . . . . . . . .  35
+     7.58. relationshipContentElementGuid  . . . . . . . . . . . . .  35
+     7.59. relationshipStatementElementGuid  . . . . . . . . . . . .  36
+     7.60. relationshipObjectLabel . . . . . . . . . . . . . . . . .  36
+     7.61. relationshipType  . . . . . . . . . . . . . . . . . . . .  36
+     7.62. roleName  . . . . . . . . . . . . . . . . . . . . . . . .  36
+     7.63. sessionStateType  . . . . . . . . . . . . . . . . . . . .  37
+     7.64. statementGuid . . . . . . . . . . . . . . . . . . . . . .  37
+     7.65. statementType . . . . . . . . . . . . . . . . . . . . . .  37
+     7.66. status  . . . . . . . . . . . . . . . . . . . . . . . . .  37
+     7.67. subAdministrativeDomain . . . . . . . . . . . . . . . . .  37
+     7.68. subInterfaceLabel . . . . . . . . . . . . . . . . . . . .  38
+     7.69. superAdministrativeDomain . . . . . . . . . . . . . . . .  38
+     7.70. superInterfaceLabel . . . . . . . . . . . . . . . . . . .  38
+     7.71. teAssessmentState . . . . . . . . . . . . . . . . . . . .  38
+     7.72. teLabel . . . . . . . . . . . . . . . . . . . . . . . . .  39
+     7.73. teId  . . . . . . . . . . . . . . . . . . . . . . . . . .  39
+     7.74. timestampType . . . . . . . . . . . . . . . . . . . . . .  39
+     7.75. WGS84Longitude  . . . . . . . . . . . . . . . . . . . . .  39
+     7.76. WGS84Latitude . . . . . . . . . . . . . . . . . . . . . .  40
+     7.77. WGS84Altitude . . . . . . . . . . . . . . . . . . . . . .  40
+     7.78. hardwareSerialNumber  . . . . . . . . . . . . . . . . . .  40
+     7.79. interfaceName . . . . . . . . . . . . . . . . . . . . . .  40
+     7.80. interfaceIndex  . . . . . . . . . . . . . . . . . . . . .  41
+     7.81. interfaceMacAddress . . . . . . . . . . . . . . . . . . .  41
+     7.82. interfaceType . . . . . . . . . . . . . . . . . . . . . .  41
+     7.83. interfaceFlags  . . . . . . . . . . . . . . . . . . . . .  41
+     7.84. networkInterface  . . . . . . . . . . . . . . . . . . . .  42
+     7.85. globallyUniqueIdentifier  . . . . . . . . . . . . . . . .  42
+     7.86. dataOrigin  . . . . . . . . . . . . . . . . . . . . . . .  42
+     7.87. dataSource  . . . . . . . . . . . . . . . . . . . . . . .  43
+     7.88. creationTimestamp . . . . . . . . . . . . . . . . . . . .  43
+     7.89. collectionTimestamp . . . . . . . . . . . . . . . . . . .  43
+     7.90. publicationTimestamp  . . . . . . . . . . . . . . . . . .  43
+     7.91. relayTimestamp  . . . . . . . . . . . . . . . . . . . . .  44
+     7.92. storageTimestamp  . . . . . . . . . . . . . . . . . . . .  44
 
 
 
@@ -226,53 +226,53 @@ Waltermire, et al.        Expires March 5, 2017                 [Page 4]
 Internet-Draft           SACM Information Model           September 2016
 
 
-     7.93. destinationTransportPort  . . . . . . . . . . . . . . . .  44
-     7.94. sourceIPv6PrefixLength  . . . . . . . . . . . . . . . . .  44
-     7.95. sourceIPv4Prefix  . . . . . . . . . . . . . . . . . . . .  44
-     7.96. destinationIPv4Prefix . . . . . . . . . . . . . . . . . .  45
-     7.97. sourceMacAddress  . . . . . . . . . . . . . . . . . . . .  45
-     7.98. ipVersion . . . . . . . . . . . . . . . . . . . . . . . .  45
-     7.99. interfaceDescription  . . . . . . . . . . . . . . . . . .  45
-     7.100. exporterIPv4Address  . . . . . . . . . . . . . . . . . .  45
-     7.101. exporterIPv6Address  . . . . . . . . . . . . . . . . . .  46
-     7.102. portId . . . . . . . . . . . . . . . . . . . . . . . . .  46
-     7.103. templateId . . . . . . . . . . . . . . . . . . . . . . .  46
-     7.104. collectorIPv4Address . . . . . . . . . . . . . . . . . .  47
-     7.105. collectorIPv6Address . . . . . . . . . . . . . . . . . .  47
-     7.106. interface  . . . . . . . . . . . . . . . . . . . . . . .  47
-     7.107. interfaceName  . . . . . . . . . . . . . . . . . . . . .  48
-     7.108. physicalProtocol . . . . . . . . . . . . . . . . . . . .  48
-     7.109. hwAddress  . . . . . . . . . . . . . . . . . . . . . . .  49
-     7.110. transportProtocol  . . . . . . . . . . . . . . . . . . .  49
-     7.111. localAddress . . . . . . . . . . . . . . . . . . . . . .  49
-     7.112. localPort  . . . . . . . . . . . . . . . . . . . . . . .  50
-     7.113. localFullAddress . . . . . . . . . . . . . . . . . . . .  50
-     7.114. foreignAddress . . . . . . . . . . . . . . . . . . . . .  50
-     7.115. foreignFullAddress . . . . . . . . . . . . . . . . . . .  50
-   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  51
-   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  51
-   10. Security Considerations . . . . . . . . . . . . . . . . . . .  51
-   11. Operational Considerations  . . . . . . . . . . . . . . . . .  52
-     11.1.  Endpoint Designation . . . . . . . . . . . . . . . . . .  52
-     11.2.  Timestamp Accuracy . . . . . . . . . . . . . . . . . . .  53
-   12. Privacy Considerations  . . . . . . . . . . . . . . . . . . .  54
-   13. References  . . . . . . . . . . . . . . . . . . . . . . . . .  54
-     13.1.  Normative References . . . . . . . . . . . . . . . . . .  54
-     13.2.  Informative References . . . . . . . . . . . . . . . . .  55
-   Appendix A.  Change Log . . . . . . . . . . . . . . . . . . . . .  56
-     A.1.  Changes in Revision 01  . . . . . . . . . . . . . . . . .  56
-     A.2.  Changes in Revision 02  . . . . . . . . . . . . . . . . .  57
-     A.3.  Changes in Revision 03  . . . . . . . . . . . . . . . . .  57
-     A.4.  Changes in Revision 04  . . . . . . . . . . . . . . . . .  58
-     A.5.  Changes in Revision 05  . . . . . . . . . . . . . . . . .  58
-     A.6.  Changes in Revision 06  . . . . . . . . . . . . . . . . .  58
-     A.7.  Changes in Revision 07  . . . . . . . . . . . . . . . . .  59
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  59
-
-1.  Introduction
-
-   The SACM Information Model (IM) serves multiple purposes:
-
+     7.93. type  . . . . . . . . . . . . . . . . . . . . . . . . . .  44
+     7.94. protocolIdentifier  . . . . . . . . . . . . . . . . . . .  44
+     7.95. sourceTransportPort . . . . . . . . . . . . . . . . . . .  45
+     7.96. sourceIPv4PrefixLength  . . . . . . . . . . . . . . . . .  45
+     7.97. ingressInterface  . . . . . . . . . . . . . . . . . . . .  45
+     7.98. destinationTransportPort  . . . . . . . . . . . . . . . .  45
+     7.99. sourceIPv6PrefixLength  . . . . . . . . . . . . . . . . .  46
+     7.100. sourceIPv4Prefix . . . . . . . . . . . . . . . . . . . .  46
+     7.101. destinationIPv4Prefix  . . . . . . . . . . . . . . . . .  46
+     7.102. sourceMacAddress . . . . . . . . . . . . . . . . . . . .  46
+     7.103. ipVersion  . . . . . . . . . . . . . . . . . . . . . . .  46
+     7.104. interfaceDescription . . . . . . . . . . . . . . . . . .  46
+     7.105. exporterIPv4Address  . . . . . . . . . . . . . . . . . .  47
+     7.106. exporterIPv6Address  . . . . . . . . . . . . . . . . . .  47
+     7.107. portId . . . . . . . . . . . . . . . . . . . . . . . . .  47
+     7.108. templateId . . . . . . . . . . . . . . . . . . . . . . .  47
+     7.109. collectorIPv4Address . . . . . . . . . . . . . . . . . .  48
+     7.110. collectorIPv6Address . . . . . . . . . . . . . . . . . .  48
+     7.111. interface  . . . . . . . . . . . . . . . . . . . . . . .  48
+     7.112. interfaceName  . . . . . . . . . . . . . . . . . . . . .  49
+     7.113. physicalProtocol . . . . . . . . . . . . . . . . . . . .  49
+     7.114. hwAddress  . . . . . . . . . . . . . . . . . . . . . . .  50
+     7.115. transportProtocol  . . . . . . . . . . . . . . . . . . .  50
+     7.116. localAddress . . . . . . . . . . . . . . . . . . . . . .  50
+     7.117. localPort  . . . . . . . . . . . . . . . . . . . . . . .  51
+     7.118. localFullAddress . . . . . . . . . . . . . . . . . . . .  51
+     7.119. foreignAddress . . . . . . . . . . . . . . . . . . . . .  51
+     7.120. foreignFullAddress . . . . . . . . . . . . . . . . . . .  51
+   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .  52
+   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  52
+   10. Security Considerations . . . . . . . . . . . . . . . . . . .  52
+   11. Operational Considerations  . . . . . . . . . . . . . . . . .  53
+     11.1.  Endpoint Designation . . . . . . . . . . . . . . . . . .  53
+     11.2.  Timestamp Accuracy . . . . . . . . . . . . . . . . . . .  54
+   12. Privacy Considerations  . . . . . . . . . . . . . . . . . . .  55
+   13. References  . . . . . . . . . . . . . . . . . . . . . . . . .  55
+     13.1.  Normative References . . . . . . . . . . . . . . . . . .  55
+     13.2.  Informative References . . . . . . . . . . . . . . . . .  56
+   Appendix A.  Change Log . . . . . . . . . . . . . . . . . . . . .  57
+     A.1.  Changes in Revision 01  . . . . . . . . . . . . . . . . .  57
+     A.2.  Changes in Revision 02  . . . . . . . . . . . . . . . . .  58
+     A.3.  Changes in Revision 03  . . . . . . . . . . . . . . . . .  58
+     A.4.  Changes in Revision 04  . . . . . . . . . . . . . . . . .  59
+     A.5.  Changes in Revision 05  . . . . . . . . . . . . . . . . .  59
+     A.6.  Changes in Revision 06  . . . . . . . . . . . . . . . . .  59
+     A.7.  Changes in Revision 07  . . . . . . . . . . . . . . . . .  60
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  60
 
 
 
@@ -281,6 +281,10 @@ Waltermire, et al.        Expires March 5, 2017                 [Page 5]
 
 Internet-Draft           SACM Information Model           September 2016
 
+
+1.  Introduction
+
+   The SACM Information Model (IM) serves multiple purposes:
 
    o  to ensure interoperable exchange of security posture information
       which is represented by different data models,
@@ -326,10 +330,6 @@ Internet-Draft           SACM Information Model           September 2016
 
    o  SACM Component Registration
 
-   These tasks are defined in [I-D.ietf-sacm-terminology].
-
-
-
 
 
 
@@ -337,6 +337,8 @@ Waltermire, et al.        Expires March 5, 2017                 [Page 6]
 
 Internet-Draft           SACM Information Model           September 2016
 
+
+   These tasks are defined in [I-D.ietf-sacm-terminology].
 
 2.  Conventions Used In This Document
 
@@ -381,11 +383,9 @@ Internet-Draft           SACM Information Model           September 2016
    o  Composed names MUST use capital letters for the first letter of
       each part
 
-3.2.  Extensibility of Information Elements
 
-   A SACM data model based on this information model MAY include
-   additional information elements that are not defined here.  The
-   labels of additional Information Elements included in different SACM
+
+
 
 
 
@@ -394,6 +394,11 @@ Waltermire, et al.        Expires March 5, 2017                 [Page 7]
 Internet-Draft           SACM Information Model           September 2016
 
 
+3.2.  Extensibility of Information Elements
+
+   A SACM data model based on this information model MAY include
+   additional information elements that are not defined here.  The
+   labels of additional Information Elements included in different SACM
    data models MUST NOT conflict with the labels of the Information
    Elements defined by this information model, and the names of
    additional Information Elements MUST NOT conflict with each other or
@@ -437,11 +442,6 @@ Internet-Draft           SACM Information Model           September 2016
                                 for the compact identification
                                 of an Information Element. If
                                 this identifier is used without
-                                an enterpriseID, then the
-                                elementId must be unique, and
-                                the description of allowed values
-                                is administrated by IANA. The
-                                value "TBD" may be used during
 
 
 
@@ -450,6 +450,11 @@ Waltermire, et al.        Expires March 5, 2017                 [Page 8]
 Internet-Draft           SACM Information Model           September 2016
 
 
+                                an enterpriseID, then the
+                                elementId must be unique, and
+                                the description of allowed values
+                                is administrated by IANA. The
+                                value "TBD" may be used during
                                 development of the information
                                 model until an elementId is
                                 assigned by IANA and filled
@@ -493,11 +498,6 @@ Internet-Draft           SACM Information Model           September 2016
                                 structured datatype as defined in
                                 Section 5.2.
 
-       status (required):       The status of the specification
-                                of the Information Element.
-                                Allowed values are "current" and
-                                "deprecated". All newly defined
-                                Information Elements have "current"
 
 
 
@@ -506,6 +506,11 @@ Waltermire, et al.        Expires March 5, 2017                 [Page 9]
 Internet-Draft           SACM Information Model           September 2016
 
 
+       status (required):       The status of the specification
+                                of the Information Element.
+                                Allowed values are "current" and
+                                "deprecated". All newly defined
+                                Information Elements have "current"
                                 status. The process for moving
                                 Information Elements to the
                                 "deprecated" status is TBD.
@@ -550,11 +555,6 @@ Internet-Draft           SACM Information Model           September 2016
    contained in these two subjects although it is up to the implementer
    whether or not the subjects are explicitly defined in a data model.
 
-   In general, every piece of information that enables security posture
-   assessment or further enriches the quality of the assessment process
-   can be associated with metadata.  In the SACM IM, metadata is
-   represented by special, predefined subjects and is bundled with other
-
 
 
 Waltermire, et al.        Expires March 5, 2017                [Page 10]
@@ -562,6 +562,10 @@ Waltermire, et al.        Expires March 5, 2017                [Page 10]
 Internet-Draft           SACM Information Model           September 2016
 
 
+   In general, every piece of information that enables security posture
+   assessment or further enriches the quality of the assessment process
+   can be associated with metadata.  In the SACM IM, metadata is
+   represented by special, predefined subjects and is bundled with other
    attributes or subjects to provide additional information about them.
    The IM explicitly defines two kinds of metadata: sacmMetadata,
    focusing on the data origin (the SACM component that provides the
@@ -606,10 +610,6 @@ Internet-Draft           SACM Information Model           September 2016
    providing SACM component instead of the target endpoint that the
    content is about.  The only content-specific metadata included in the
    SACM statement is the content-type IE.  Therefore, multiple content-
-   elements that share the same statement metadata and are of the same
-   content-type can be included in a single SACM statement.  A SACM
-   statement functions similar to an envelope or a header.  Its purpose
-   is to enable the tracking of the origin of data inside a SACM domain
 
 
 
@@ -618,6 +618,10 @@ Waltermire, et al.        Expires March 5, 2017                [Page 11]
 Internet-Draft           SACM Information Model           September 2016
 
 
+   elements that share the same statement metadata and are of the same
+   content-type can be included in a single SACM statement.  A SACM
+   statement functions similar to an envelope or a header.  Its purpose
+   is to enable the tracking of the origin of data inside a SACM domain
    and more importantly to enable the mitigation of conflicting
    information that may originate from different SACM components.  How a
    consuming SACM component actually deals with conflicting information
@@ -662,10 +666,6 @@ Internet-Draft           SACM Information Model           September 2016
    references.  Therefore, there are at least two ways to reference
    another
 
-   o  The value of a reference represents a specific content-label that
-      is unique in a SACM domain (and has to be included in the
-      corresponding content-element metadata in order to be referenced),
-      or
 
 
 
@@ -673,6 +673,11 @@ Waltermire, et al.        Expires March 5, 2017                [Page 12]
 
 Internet-Draft           SACM Information Model           September 2016
 
+
+   o  The value of a reference represents a specific content-label that
+      is unique in a SACM domain (and has to be included in the
+      corresponding content-element metadata in order to be referenced),
+      or
 
    o  The reference is a subject that includes an appropriate number of
       IEs in order to identify the referenced content-element by its
@@ -717,11 +722,6 @@ Internet-Draft           SACM Information Model           September 2016
    timestamp in an event subject and it is recommended to include the
    past values and a collection timestamp that were replaced by the new
    IE values.  Every event can also be associated with a subject-
-   specific event-timestamp and a lastseen-timestamp that might differ
-   from the corresponding collection-timestamps.  If these are omitted
-   the collection-timestamp that is included in the content-metadata
-   subject is used instead.
-
 
 
 
@@ -729,6 +729,11 @@ Waltermire, et al.        Expires March 5, 2017                [Page 13]
 
 Internet-Draft           SACM Information Model           September 2016
 
+
+   specific event-timestamp and a lastseen-timestamp that might differ
+   from the corresponding collection-timestamps.  If these are omitted
+   the collection-timestamp that is included in the content-metadata
+   subject is used instead.
 
            sacmStatement = (
              statementMetadata = (
@@ -772,11 +777,6 @@ Internet-Draft           SACM Information Model           September 2016
    o  Simple: Datatypes that are atomic and are used to define the type
       of data represented by an attribute Information Element.
 
-   o  Structured: Datatypes that can be used to define the type of data
-      represented by a subject Information Element.
-
-   Note that further abstract data types may be specified by future
-   extensions of the SACM information model.
 
 
 
@@ -785,6 +785,12 @@ Waltermire, et al.        Expires March 5, 2017                [Page 14]
 
 Internet-Draft           SACM Information Model           September 2016
 
+
+   o  Structured: Datatypes that can be used to define the type of data
+      represented by a subject Information Element.
+
+   Note that further abstract data types may be specified by future
+   extensions of the SACM information model.
 
 5.1.  Simple Datatypes
 
@@ -828,12 +834,6 @@ Internet-Draft           SACM Information Model           September 2016
    The notation for defining a SACM structured datatype is based on
    regular expressions, which are composed of the keywords "list" or
    "orderedList" and an Information Element expression.  IE expressions
-   use some of the regular expression syntax and operators, but the
-   terms in the expression are the names of defined Information Elements
-   instead of character classes.  The syntax for defining list and
-   orderedList datatypes is described below, using BNF:
-
-
 
 
 
@@ -841,6 +841,11 @@ Waltermire, et al.        Expires March 5, 2017                [Page 15]
 
 Internet-Draft           SACM Information Model           September 2016
 
+
+   use some of the regular expression syntax and operators, but the
+   terms in the expression are the names of defined Information Elements
+   instead of character classes.  The syntax for defining list and
+   orderedList datatypes is described below, using BNF:
 
        <list-def> -> ("list"|"orderedList") "(" <ie-expression> ")"
 
@@ -871,11 +876,6 @@ Internet-Draft           SACM Information Model           September 2016
    occurrence of the Information Element.
 
    Below is an example of a structured Information Element definition.
-
-
-
-
-
 
 
 
@@ -1269,15 +1269,15 @@ Internet-Draft           SACM Information Model           September 2016
    relationships that will be implemented by data models and transported
    between SACM Components.
 
-7.1.  accessPrivilegeType
+7.1.  componentIdentifier
 
-               elementId: TBD
-               name: accessPrivilegeType
-               dataType: string
-               status: current
-               description: A set of types that represent access
-               privileges (read, write, none, etc.).
+                           elementId: TBD
+                           name: componentIdentifier
+                           dataType: list
+                           status: current
+                           description:
 
+7.2.  targetEndpointIdentifier
 
 
 
@@ -1290,52 +1290,52 @@ Waltermire, et al.        Expires March 5, 2017                [Page 23]
 Internet-Draft           SACM Information Model           September 2016
 
 
-7.2.  accountName
+                           elementId: TBD
+                           name: targetEndpointIdenitifer
+                           dataType: categgory (
+                           targetEndpointIdenitiferLabel |
+                           targetEndpointIdenitiferAttributes)
+                           status: current
+                           description: The identifier of a target
+                           endpoint. This may be a label unique to
+                           a SACM domain or a set of attributes that
+                           can be used to identify an endpoint on a
+                           network.
 
-               elementId: TBD
-               name: accountName
-               dataType: string
-               status: current
-               description: A label that uniquely identifies an account
-               that can require some form of (user) authentication to
-               access.
+7.3.  collectedData
 
-7.3.  administrativeDomainType
+                           elementId: TBD
+                           name: collectedData
+                           dataType:
+                           status: current
+                           description: The set of bytes
+                           representing the collected data.
 
-               elementId: TBD
-               name: accessPrivilegeType
-               dataType: string
-               status: current
-               description: A label the is supposed to uniquely
-               identify an administrative domain.
+7.4.  collectedDataType
 
-7.4.  addressAssociationType
+                           elementId: TBD
+                           name: collectedDataType
+                           dataType: enumeration
+                           IPFIX ; 0x1 ; The collected data
+                                         conforms to IPFIX
+                           WMI   ; 0x2 ;
+                           SWID  ; 0x3 ;
+                           OVAL  ; 0x4 ;
 
-               elementId: TBD
-               name: accessPrivilegeType
-               dataType: string
-               status: current
-               description: A label the is supposed to uniquely
-               identify an administrative domain.
+                           status: current
+                           description: The collection protocol to
+                           which the collected data conforms.
 
-7.5.  addressMaskValue
 
-               elementId: TBD
-               name: addressMaskValue
-               dataType: string
-               status: current
-               description: A value that expresses a generic address
-               subnetting bitmask.
+7.5.  collectedDataReference
 
-7.6.  addressType
-
-               elementId: TBD
-               name: addressType
-               dataType: string
-               status: current
-               description: A set of types that specifies the type
-               of address that is expressed in an address subject
-               (e.g. ethernet, modbus, zigbee).
+                           elementId: TBD
+                           name: collectedDataReference
+                           dataType: category (URL |
+                           repsitoryName...
+                           status: current
+                           description: The set of bytes
+                           representing the collected data.
 
 
 
@@ -1346,7 +1346,73 @@ Waltermire, et al.        Expires March 5, 2017                [Page 24]
 Internet-Draft           SACM Information Model           September 2016
 
 
-7.7.  addressValue
+7.6.  accessPrivilegeType
+
+               elementId: TBD
+               name: accessPrivilegeType
+               dataType: string
+               status: current
+               description: A set of types that represent access
+               privileges (read, write, none, etc.).
+
+7.7.  accountName
+
+               elementId: TBD
+               name: accountName
+               dataType: string
+               status: current
+               description: A label that uniquely identifies an account
+               that can require some form of (user) authentication to
+               access.
+
+7.8.  administrativeDomainType
+
+               elementId: TBD
+               name: accessPrivilegeType
+               dataType: string
+               status: current
+               description: A label the is supposed to uniquely
+               identify an administrative domain.
+
+7.9.  addressAssociationType
+
+               elementId: TBD
+               name: accessPrivilegeType
+               dataType: string
+               status: current
+               description: A label the is supposed to uniquely
+               identify an administrative domain.
+
+7.10.  addressMaskValue
+
+               elementId: TBD
+               name: addressMaskValue
+               dataType: string
+               status: current
+               description: A value that expresses a generic address
+               subnetting bitmask.
+
+
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 25]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+7.11.  addressType
+
+               elementId: TBD
+               name: addressType
+               dataType: string
+               status: current
+               description: A set of types that specifies the type
+               of address that is expressed in an address subject
+               (e.g. ethernet, modbus, zigbee).
+
+7.12.  addressValue
 
                elementId: TBD
                name: addressValue
@@ -1355,7 +1421,7 @@ Internet-Draft           SACM Information Model           September 2016
                description: A value that expresses a generic network
                             address.
 
-7.8.  authenticator
+7.13.  authenticator
 
                elementId: TBD
                name: authenticator
@@ -1366,7 +1432,7 @@ Internet-Draft           SACM Information Model           September 2016
                a target-endpoint subject to express that the target
                endpoint was authenticated by that SACM component.
 
-7.9.  authenticationType
+7.14.  authenticationType
 
                elementId: TBD
                name: authenticationType
@@ -1376,7 +1442,7 @@ Internet-Draft           SACM Information Model           September 2016
                of authentication was used to enable a network
                interaction/connection.
 
-7.10.  certificate
+7.15.  certificate
 
                elementId: TBD
                name: certificate
@@ -1385,7 +1451,14 @@ Internet-Draft           SACM Information Model           September 2016
                description: A value that expresses a certificate that
                can be collected from a target endpoint.
 
-7.11.  collectionTaskType
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 26]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+7.16.  collectionTaskType
 
                elementId: TBD
                name: collectionTaskType
@@ -1395,14 +1468,7 @@ Internet-Draft           SACM Information Model           September 2016
                SACM content was acquired (e.g. network-observation,
                remote-acquisition, self-reported).
 
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 25]
-
-Internet-Draft           SACM Information Model           September 2016
-
-
-7.12.  confidence
+7.17.  confidence
 
             elementId: TBD
             name: confidence
@@ -1413,7 +1479,7 @@ Internet-Draft           SACM Information Model           September 2016
             is given, it is assumed that the confidence is 1. Acceptable
             values are between 0 and 1.
 
-7.13.  contentAction
+7.18.  contentAction
 
                elementId: TBD
                name: contentAction
@@ -1424,7 +1490,7 @@ Internet-Draft           SACM Information Model           September 2016
                for instance, with an event subject or with a network
                observation.
 
-7.14.  dataOrigin
+7.19.  dataOrigin
 
                elementId: TBD
                name: dataOrigin
@@ -1433,73 +1499,7 @@ Internet-Draft           SACM Information Model           September 2016
                description: A label that uniquely identifies a SACM
                component in and across SACM domains.
 
-7.15.  dataSource
-
-               elementId: TBD
-               name: dataSource
-               dataType: string
-               status: current
-               description: A label that is supposed to uniquely
-               identify the data source (e.g. a target endpoint or
-               sensor) that provided an initial endpoint attribute
-               record.
-
-7.16.  discoverer
-
-
-
-
-
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 26]
-
-Internet-Draft           SACM Information Model           September 2016
-
-
-               elementId: TBD
-               name: contentAction
-               dataType: string
-               status: current
-               description: A label that refers to the SACM component
-               that discovered a target endpoint (can be used in a
-               target-endpoint subject to express, for example, that
-               the target endpoint was authenticated by that SACM
-               component).
-
-7.17.  eventType
-
-               elementId: TBD
-               name: eventType
-               dataType: string
-               status: current
-               description: a set of types that define the categories
-               of an event (e.g. access-level-change,
-               change-of-priviledge, change-of-authorization,
-               environmental-event, or provisioning-event).
-
-7.18.  eventThreshold
-
-               elementId: TBD
-               name: eventThreshold
-               dataType: string
-               status: current
-               description: if applicable, a value that can be
-               included in an event subject to indicate what numeric
-               threshold value was crossed to trigger that event.
-
-7.19.  eventThresholdName
-
-               elementId: TBD
-               name: eventThresholdName
-               dataType: string
-               status: current
-               description: If an event is created due to a crossed
-               threshold, the threshold might have a name associated
-               with it that can be expressed via this value.
-
-7.20.  eventTrigger
+7.20.  dataSource
 
 
 
@@ -1515,50 +1515,50 @@ Internet-Draft           SACM Information Model           September 2016
 
 
                elementId: TBD
-               name: eventTrigger
+               name: dataSource
                dataType: string
                status: current
-               description: This value is used to express more
-               complex trigger conditions that may cause the creation
-               of an event.
+               description: A label that is supposed to uniquely
+               identify the data source (e.g. a target endpoint or
+               sensor) that provided an initial endpoint attribute
+               record.
 
-7.21.  eventTrigger
+7.21.  discoverer
 
                elementId: TBD
-               name: eventTrigger
+               name: contentAction
                dataType: string
                status: current
-               description: This value is used to express more
-               complex trigger conditions that may cause the creation
-               of an event.
+               description: A label that refers to the SACM component
+               that discovered a target endpoint (can be used in a
+               target-endpoint subject to express, for example, that
+               the target endpoint was authenticated by that SACM
+               component).
 
-7.22.  firmwareId
+7.22.  eventType
 
                elementId: TBD
-               name: firmwareId
+               name: eventType
                dataType: string
                status: current
-               description: A label that represents the BIOS or
-               firmware ID of a specific target endpoint.
+               description: a set of types that define the categories
+               of an event (e.g. access-level-change,
+               change-of-priviledge, change-of-authorization,
+               environmental-event, or provisioning-event).
 
-7.23.  hostName
+7.23.  eventThreshold
 
                elementId: TBD
-               name: hostName
+               name: eventThreshold
                dataType: string
                status: current
-               description: A label typically associated with an
-               endpoint, but, not always intended to be unique given
-               scope.
+               description: if applicable, a value that can be
+               included in an event subject to indicate what numeric
+               threshold value was crossed to trigger that event.
 
-7.24.  interfaceLabel
+7.24.  eventThresholdName
 
-               elementId: TBD
-               name: interfaceLabel
-               dataType: string
-               status: current
-               description: A unique label that can be used to
-                            reference a network interface.
+
 
 
 
@@ -1570,54 +1570,54 @@ Waltermire, et al.        Expires March 5, 2017                [Page 28]
 Internet-Draft           SACM Information Model           September 2016
 
 
-7.25.  ipv6AddressSubnetMask
-
                elementId: TBD
-               name: ipv6AddressSubnetMask
+               name: eventThresholdName
                dataType: string
                status: current
-               description: An IPv6 subnet bitmask.
+               description: If an event is created due to a crossed
+               threshold, the threshold might have a name associated
+               with it that can be expressed via this value.
 
-7.26.  ipv6AddressSubnetMaskCidrNotation
+7.25.  eventTrigger
 
                elementId: TBD
-               name: ipv6AddressSubnetMaskCidrNotation
+               name: eventTrigger
                dataType: string
                status: current
-               description: An IPv6 subnet bitmask in CIDR notation.
+               description: This value is used to express more
+               complex trigger conditions that may cause the creation
+               of an event.
 
-7.27.  ipv6AddressValue
-
-               elementId: TBD
-               name: ipv6AddressValue
-               dataType: ipv6Address
-               status: current
-               description: An IPv6 subnet bitmask in CIDR notation.
-               a network interface.
-
-7.28.  ipv4AddressSubnetMask
+7.26.  eventTrigger
 
                elementId: TBD
-               name: ipv4AddressSubnetMask
+               name: eventTrigger
                dataType: string
                status: current
-               description: An IPv4 subnet bitmask.
+               description: This value is used to express more
+               complex trigger conditions that may cause the creation
+               of an event.
 
-7.29.  ipv4AddressSubnetMaskCidrNotation
+7.27.  firmwareId
 
                elementId: TBD
-               name: ipv4AddressSubnetMaskCidrNotation
+               name: firmwareId
                dataType: string
                status: current
-               description: An IPv4 subnet bitmask in CIDR notation.
+               description: A label that represents the BIOS or
+               firmware ID of a specific target endpoint.
 
-7.30.  ipv4AddressValue
+7.28.  hostName
 
                elementId: TBD
-               name: ipv4AddressValue
-               dataType: ipv4Address
+               name: hostName
+               dataType: string
                status: current
-               description: An IPv4 address value.
+               description: A label typically associated with an
+               endpoint, but, not always intended to be unique given
+               scope.
+
+
 
 
 
@@ -1626,49 +1626,49 @@ Waltermire, et al.        Expires March 5, 2017                [Page 29]
 Internet-Draft           SACM Information Model           September 2016
 
 
-7.31.  layer2InterfaceType
+7.29.  interfaceLabel
 
                elementId: TBD
-               name: layer2InterfaceType
+               name: interfaceLabel
                dataType: string
                status: current
-               description: A set of types referenced by IANA ifType.
+               description: A unique label that can be used to
+                            reference a network interface.
 
-7.32.  layer4PortAddress
-
-               elementId: TBD
-               name: layer4PortAddress
-               dataType: unsigned32
-               status: current
-               description: A layer 4 port address
-               typically associated with TCP and UDP
-               protocols.
-
-7.33.  layer4Protocol
+7.30.  ipv6AddressSubnetMask
 
                elementId: TBD
-               name: layer4Protocol
+               name: ipv6AddressSubnetMask
                dataType: string
                status: current
-               description: A set of types that express a layer 4
-               protocol (e.g. UDP or TCP).
+               description: An IPv6 subnet bitmask.
 
-7.34.  locationName
-
-               elementId: TBD
-               name: locationName
-               dataType: string
-               status: current
-               description: A value that represents a named region of
-                            physical space.
-
-7.35.  macAddressValue
+7.31.  ipv6AddressSubnetMaskCidrNotation
 
                elementId: TBD
-               name: macAddressValue
+               name: ipv6AddressSubnetMaskCidrNotation
                dataType: string
                status: current
-               description: A value that expresses an Ethernet address.
+               description: An IPv6 subnet bitmask in CIDR notation.
+
+7.32.  ipv6AddressValue
+
+               elementId: TBD
+               name: ipv6AddressValue
+               dataType: ipv6Address
+               status: current
+               description: An IPv6 subnet bitmask in CIDR notation.
+               a network interface.
+
+7.33.  ipv4AddressSubnetMask
+
+               elementId: TBD
+               name: ipv4AddressSubnetMask
+               dataType: string
+               status: current
+               description: An IPv4 subnet bitmask.
+
+7.34.  ipv4AddressSubnetMaskCidrNotation
 
 
 
@@ -1682,7 +1682,78 @@ Waltermire, et al.        Expires March 5, 2017                [Page 30]
 Internet-Draft           SACM Information Model           September 2016
 
 
-7.36.  methodLabel
+               elementId: TBD
+               name: ipv4AddressSubnetMaskCidrNotation
+               dataType: string
+               status: current
+               description: An IPv4 subnet bitmask in CIDR notation.
+
+7.35.  ipv4AddressValue
+
+               elementId: TBD
+               name: ipv4AddressValue
+               dataType: ipv4Address
+               status: current
+               description: An IPv4 address value.
+
+7.36.  layer2InterfaceType
+
+               elementId: TBD
+               name: layer2InterfaceType
+               dataType: string
+               status: current
+               description: A set of types referenced by IANA ifType.
+
+7.37.  layer4PortAddress
+
+               elementId: TBD
+               name: layer4PortAddress
+               dataType: unsigned32
+               status: current
+               description: A layer 4 port address
+               typically associated with TCP and UDP
+               protocols.
+
+7.38.  layer4Protocol
+
+               elementId: TBD
+               name: layer4Protocol
+               dataType: string
+               status: current
+               description: A set of types that express a layer 4
+               protocol (e.g. UDP or TCP).
+
+7.39.  locationName
+
+
+
+
+
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 31]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+               elementId: TBD
+               name: locationName
+               dataType: string
+               status: current
+               description: A value that represents a named region of
+                            physical space.
+
+7.40.  macAddressValue
+
+               elementId: TBD
+               name: macAddressValue
+               dataType: string
+               status: current
+               description: A value that expresses an Ethernet address.
+
+7.41.  methodLabel
 
                elementId: TBD
                name: methodLabel
@@ -1693,7 +1764,7 @@ Internet-Draft           SACM Information Model           September 2016
                match and re-identify target endpoints via identifying
                attributes).
 
-7.37.  methodRepository
+7.42.  methodRepository
 
                elementId: TBD
                name: methodRepository
@@ -1704,7 +1775,7 @@ Internet-Draft           SACM Information Model           September 2016
                guidance in the form of registered methods to other
                SACM components.
 
-7.38.  networkAccessLevelType
+7.43.  networkAccessLevelType
 
                elementId: TBD
                name: networkAccessLevelType
@@ -1713,77 +1784,6 @@ Internet-Draft           SACM Information Model           September 2016
                description: A set of types that expresses categories
                of network access-levels (e.g. block, quarantine, etc.).
 
-7.39.  networkId
-
-               elementId: TBD
-               name: networkId
-               dataType: string
-               status: current
-               description: Most networks such as AS, OSBF domains,
-               or VLANs can have an ID.
-
-7.40.  networkInterfaceName
-
-              elementId: TBD
-              name: networkInterfaceName
-              dataType: string
-              status: current
-              description: A label that uniquely identifies an interface
-              associated with a distinguishable endpoint.
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 31]
-
-Internet-Draft           SACM Information Model           September 2016
-
-
-7.41.  networkLayer
-
-               elementId: TBD
-               name: networkLayer
-               dataType: string
-               status: current
-               description: A set of layers that expresses the specific
-               network layer an interface operates on.
-
-7.42.  networkName
-
-            elementId: TBD
-            name: networkName
-            dataType: string
-            status: current
-            description: A label that is associated with a network.
-            Some networks, for example, effetive layer2-broadcast-domains
-            are difficult to "grasp" and therefore quite difficult to name.
-
-7.43.  organizationId
-
-               elementId: TBD
-               name: organizationId
-               dataType: string
-               status: current
-               description: A label that uniquely identifies an
-                            organization via a PEN.
-
-7.44.  osComponent
-
-               elementId: TBD
-               name: osComponent
-               dataType: string
-               status: current
-               description: A label that references a "sub-component"
-               that is part of the operating system (e.g. a kernel
-               module, microcode, or ACPI table).
-
-7.45.  osLabel
-
-               elementId: TBD
-               name: osLabel
-               dataType: string
-               status: current
-               description: A label that references a specific version
-               of an operating system, including patches and hotfixes.
 
 
 
@@ -1794,51 +1794,51 @@ Waltermire, et al.        Expires March 5, 2017                [Page 32]
 Internet-Draft           SACM Information Model           September 2016
 
 
-7.46.  osName
+7.44.  networkId
 
                elementId: TBD
-               name: osName
+               name: networkId
                dataType: string
                status: current
-               description: The name of an operating system.
+               description: Most networks such as AS, OSBF domains,
+               or VLANs can have an ID.
 
-7.47.  osType
+7.45.  networkInterfaceName
+
+              elementId: TBD
+              name: networkInterfaceName
+              dataType: string
+              status: current
+              description: A label that uniquely identifies an interface
+              associated with a distinguishable endpoint.
+
+7.46.  networkLayer
 
                elementId: TBD
-               name: osType
+               name: networkLayer
                dataType: string
                status: current
-               description: A set of types that identifies the type
-               of an operating system (e.g. real-time,
-               security-enhanced, consumer, server).
+               description: A set of layers that expresses the specific
+               network layer an interface operates on.
 
-7.48.  osVersion
+7.47.  networkName
+
+            elementId: TBD
+            name: networkName
+            dataType: string
+            status: current
+            description: A label that is associated with a network.
+            Some networks, for example, effetive layer2-broadcast-domains
+            are difficult to "grasp" and therefore quite difficult to name.
+
+7.48.  organizationId
 
                elementId: TBD
-               name: osVersion
+               name: organizationId
                dataType: string
                status: current
-               description: A value that represents the version of
-               an operating-system.
-
-7.49.  privilegeName
-
-               elementId: TBD
-               name: privilegeName
-               dataType: string
-               status: current
-               description: The attribute name of the privilege
-               represented as an AVP.
-
-7.50.  privilegeValue
-
-               elementId: TBD
-               name: privilegeValue
-               dataType: string
-               status: current
-               description: The value content of the privilege
-               represented as an AVP.
-
+               description: A label that uniquely identifies an
+                            organization via a PEN.
 
 
 
@@ -1850,51 +1850,51 @@ Waltermire, et al.        Expires March 5, 2017                [Page 33]
 Internet-Draft           SACM Information Model           September 2016
 
 
-7.51.  protocol
+7.49.  osComponent
 
                elementId: TBD
-               name: protocol
+               name: osComponent
                dataType: string
                status: current
-               description: A set of types that defines specific
-               protocols above layer 4 (e.g. http, https, dns, ipp,
-               or unknown).
+               description: A label that references a "sub-component"
+               that is part of the operating system (e.g. a kernel
+               module, microcode, or ACPI table).
 
-7.52.  publicKey
+7.50.  osLabel
 
                elementId: TBD
-               name: publicKey
+               name: osLabel
                dataType: string
                status: current
-               description: The value of a public key (regardless of its
-               method of creation, crypto-system, or signature scheme)
-               that can be collected from a target endpoint.
+               description: A label that references a specific version
+               of an operating system, including patches and hotfixes.
 
-7.53.  relationshipContentElementGuid
+7.51.  osName
 
                elementId: TBD
-               name: relationshipContentElementGuid
+               name: osName
                dataType: string
                status: current
-               description: A reference to a specific content element
-               used in a relationship subject.
+               description: The name of an operating system.
 
-7.54.  relationshipStatementElementGuid
+7.52.  osType
 
                elementId: TBD
-               name: relationshipStatementElementGuid
+               name: osType
                dataType: string
                status: current
-               description: A reference to a specific SACM statement
-               used in a relationship subject.
+               description: A set of types that identifies the type
+               of an operating system (e.g. real-time,
+               security-enhanced, consumer, server).
 
-7.55.  relationshipObjectLabel
+7.53.  osVersion
 
-
-
-
-
-
+               elementId: TBD
+               name: osVersion
+               dataType: string
+               status: current
+               description: A value that represents the version of
+               an operating-system.
 
 
 
@@ -1905,6 +1905,73 @@ Waltermire, et al.        Expires March 5, 2017                [Page 34]
 
 Internet-Draft           SACM Information Model           September 2016
 
+
+7.54.  privilegeName
+
+               elementId: TBD
+               name: privilegeName
+               dataType: string
+               status: current
+               description: The attribute name of the privilege
+               represented as an AVP.
+
+7.55.  privilegeValue
+
+               elementId: TBD
+               name: privilegeValue
+               dataType: string
+               status: current
+               description: The value content of the privilege
+               represented as an AVP.
+
+7.56.  protocol
+
+               elementId: TBD
+               name: protocol
+               dataType: string
+               status: current
+               description: A set of types that defines specific
+               protocols above layer 4 (e.g. http, https, dns, ipp,
+               or unknown).
+
+7.57.  publicKey
+
+               elementId: TBD
+               name: publicKey
+               dataType: string
+               status: current
+               description: The value of a public key (regardless of its
+               method of creation, crypto-system, or signature scheme)
+               that can be collected from a target endpoint.
+
+7.58.  relationshipContentElementGuid
+
+               elementId: TBD
+               name: relationshipContentElementGuid
+               dataType: string
+               status: current
+               description: A reference to a specific content element
+               used in a relationship subject.
+
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 35]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+7.59.  relationshipStatementElementGuid
+
+               elementId: TBD
+               name: relationshipStatementElementGuid
+               dataType: string
+               status: current
+               description: A reference to a specific SACM statement
+               used in a relationship subject.
+
+7.60.  relationshipObjectLabel
 
              elementId: TBD
              name: relationshipObjectLabel
@@ -1917,7 +1984,7 @@ Internet-Draft           SACM Information Model           September 2016
              included in addition to a relationship-content-element-guid
              reference.
 
-7.56.  relationshipType
+7.61.  relationshipType
 
             elementId: TBD
             name: relationshipType
@@ -1930,7 +1997,7 @@ Internet-Draft           SACM Information Model           September 2016
             applies_to_session, seen_on_interface, associated_with_flow,
             contains_virtual_device).
 
-7.57.  roleName
+7.62.  roleName
 
                elementId: TBD
                name: roleName
@@ -1939,73 +2006,6 @@ Internet-Draft           SACM Information Model           September 2016
                description: A label that references a collection of
                privileges assigned to a specific entity (identity?
                FIXME).
-
-7.58.  sessionStateType
-
-               elementId: TBD
-               name: sessionStateType
-               dataType: string
-               status: current
-               description: A set of types a discernible session (an
-               ongoing network interaction) can be in (e.g.
-               Authenticating, Authenticated, Postured, Started,
-               Disconnected).
-
-
-
-
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 35]
-
-Internet-Draft           SACM Information Model           September 2016
-
-
-7.59.  statementGuid
-
-               elementId: TBD
-               name: statementGuid
-               dataType: string
-               status: current
-               description: A label that expresses a global unique
-               ID referencing a specific SACM statement that was
-               produced by a SACM component.
-
-7.60.  statementType
-
-               elementId: TBD
-               name: statementType
-               dataType: string
-               status: current
-               description: A set of types that define the type of
-               content that is included in a SACM statement (e.g.
-               Observation, DirectoryContent, Correlation, Assessment,
-               Guidance).
-
-7.61.  status
-
-               elementId: TBD
-               name: status
-               dataType: string
-               status: current
-               description: A set of types that defines possible
-               result values for a finding in general (e.g. true,
-               false, error, unknown, not applicable, not evaluated).
-
-7.62.  subAdministrativeDomain
-
-               elementId: TBD
-               name: subAdministrativeDomain
-               dataType: string
-               status: current
-               description: A label for related child domains an
-               administrative domain can be composed of (used in the
-               subject administrative-domain)
-
-7.63.  subInterfaceLabel
-
-
 
 
 
@@ -2018,49 +2018,49 @@ Waltermire, et al.        Expires March 5, 2017                [Page 36]
 Internet-Draft           SACM Information Model           September 2016
 
 
-               elementId: TBD
-               name: subInterfaceLabel
-               dataType: string
-               status: current
-               description: A unique label a sub network interface
-               (e.g. a tagged vlan on a trunk) can be referenced
-               with.
-
-7.64.  superAdministrativeDomain
+7.63.  sessionStateType
 
                elementId: TBD
-               name: superAdministrativeDomain
+               name: sessionStateType
                dataType: string
                status: current
-               description: a label for related parent domains an
-                            administrative domain is part of (used
-                            in the subject s.administrative-domain).
+               description: A set of types a discernible session (an
+               ongoing network interaction) can be in (e.g.
+               Authenticating, Authenticated, Postured, Started,
+               Disconnected).
 
-7.65.  superInterfaceLabel
+7.64.  statementGuid
 
                elementId: TBD
-               name: superInterfaceLabel
+               name: statementGuid
                dataType: string
                status: current
-               description: a unique label a super network interface
-                            (e.g. a physical interface a tunnel
-                            interface terminates on) can be referenced
-                            with.
+               description: A label that expresses a global unique
+               ID referencing a specific SACM statement that was
+               produced by a SACM component.
 
-7.66.  teAssessmentState
+7.65.  statementType
 
                elementId: TBD
-               name: teAssessmentState
+               name: statementType
                dataType: string
                status: current
-               description: a set of types that defines the state of
-                            assessment of a target-endpoint (e.g.
-                            in-discovery, discovered, in-classification,
-                            classified, in-assessment, assessed).
+               description: A set of types that define the type of
+               content that is included in a SACM statement (e.g.
+               Observation, DirectoryContent, Correlation, Assessment,
+               Guidance).
 
-7.67.  teLabel
+7.66.  status
 
+               elementId: TBD
+               name: status
+               dataType: string
+               status: current
+               description: A set of types that defines possible
+               result values for a finding in general (e.g. true,
+               false, error, unknown, not applicable, not evaluated).
 
+7.67.  subAdministrativeDomain
 
 
 
@@ -2075,6 +2075,73 @@ Internet-Draft           SACM Information Model           September 2016
 
 
                elementId: TBD
+               name: subAdministrativeDomain
+               dataType: string
+               status: current
+               description: A label for related child domains an
+               administrative domain can be composed of (used in the
+               subject administrative-domain)
+
+7.68.  subInterfaceLabel
+
+               elementId: TBD
+               name: subInterfaceLabel
+               dataType: string
+               status: current
+               description: A unique label a sub network interface
+               (e.g. a tagged vlan on a trunk) can be referenced
+               with.
+
+7.69.  superAdministrativeDomain
+
+               elementId: TBD
+               name: superAdministrativeDomain
+               dataType: string
+               status: current
+               description: a label for related parent domains an
+                            administrative domain is part of (used
+                            in the subject s.administrative-domain).
+
+7.70.  superInterfaceLabel
+
+               elementId: TBD
+               name: superInterfaceLabel
+               dataType: string
+               status: current
+               description: a unique label a super network interface
+                            (e.g. a physical interface a tunnel
+                            interface terminates on) can be referenced
+                            with.
+
+7.71.  teAssessmentState
+
+
+
+
+
+
+
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 38]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+               elementId: TBD
+               name: teAssessmentState
+               dataType: string
+               status: current
+               description: a set of types that defines the state of
+                            assessment of a target-endpoint (e.g.
+                            in-discovery, discovered, in-classification,
+                            classified, in-assessment, assessed).
+
+7.72.  teLabel
+
+               elementId: TBD
                name: teLabel
                dataType: string
                status: current
@@ -2082,7 +2149,7 @@ Internet-Draft           SACM Information Model           September 2016
                             of identifying attributes used to reference
                             a specific target endpoint.
 
-7.68.  teId
+7.73.  teId
 
                elementId: TBD
                name: teId
@@ -2093,7 +2160,7 @@ Internet-Draft           SACM Information Model           September 2016
                             used to reference a specific target
                             endpoint.
 
-7.69.  timestampType
+7.74.  timestampType
 
                elementId: TBD
                name: timestampType
@@ -2105,74 +2172,7 @@ Internet-Draft           SACM Information Model           September 2016
                             collected, published). Can be included in
                             a generic s.timestamp subject.
 
-7.70.  WGS84Longitude
-
-               elementId: TBD
-               name: WGS84Longitude
-               dataType: float
-               status: current
-               description: a label that represents WGS 84 rev 2004
-               longitude.
-
-7.71.  WGS84Latitude
-
-               elementId: TBD
-               name: WGS84Latitude
-               dataType: float
-               status: current
-               description: a label that represents WGS 84 rev 2004
-               latitude.
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 38]
-
-Internet-Draft           SACM Information Model           September 2016
-
-
-7.72.  WGS84Altitude
-
-               elementId: TBD
-               name: WGS84Altitude
-               dataType: float
-               status: current
-               description: a label that represents WGS 84 rev 2004
-               altitude.
-
-7.73.  hardwareSerialNumber
-
-   elementId: TBD
-   name: hardwareSerialNumber
-   dataType: string
-   status: current
-   description: A globally unique identifier for a particular
-                piece of hardware assigned by the vendor.
-
-7.74.  interfaceName
-
-   elementId: TBD
-   name: interfaceName
-   dataType: string
-   status: current
-   description: A short name uniquely describing an interface,
-                eg "Eth1/0". See [RFC2863] for the definition
-                of the ifName object.
-
-7.75.  interfaceIndex
-
-   elementId: TBD
-   name: interfaceIndex
-   dataType: unsigned32
-   status: current
-   description: The index of an interface installed on an endpoint.
-                The value matches the value of managed object
-                'ifIndex' as defined in [RFC2863]. Note that ifIndex
-                values are not assigned statically to an interface
-                and that the interfaces may be renumbered every time
-                the device's management system is re-initialized,
-                as specified in [RFC2863].
-
-7.76.  interfaceMacAddress
+7.75.  WGS84Longitude
 
 
 
@@ -2186,6 +2186,78 @@ Waltermire, et al.        Expires March 5, 2017                [Page 39]
 Internet-Draft           SACM Information Model           September 2016
 
 
+               elementId: TBD
+               name: WGS84Longitude
+               dataType: float
+               status: current
+               description: a label that represents WGS 84 rev 2004
+               longitude.
+
+7.76.  WGS84Latitude
+
+               elementId: TBD
+               name: WGS84Latitude
+               dataType: float
+               status: current
+               description: a label that represents WGS 84 rev 2004
+               latitude.
+
+7.77.  WGS84Altitude
+
+               elementId: TBD
+               name: WGS84Altitude
+               dataType: float
+               status: current
+               description: a label that represents WGS 84 rev 2004
+               altitude.
+
+7.78.  hardwareSerialNumber
+
+   elementId: TBD
+   name: hardwareSerialNumber
+   dataType: string
+   status: current
+   description: A globally unique identifier for a particular
+                piece of hardware assigned by the vendor.
+
+7.79.  interfaceName
+
+   elementId: TBD
+   name: interfaceName
+   dataType: string
+   status: current
+   description: A short name uniquely describing an interface,
+                eg "Eth1/0". See [RFC2863] for the definition
+                of the ifName object.
+
+
+
+
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 40]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+7.80.  interfaceIndex
+
+   elementId: TBD
+   name: interfaceIndex
+   dataType: unsigned32
+   status: current
+   description: The index of an interface installed on an endpoint.
+                The value matches the value of managed object
+                'ifIndex' as defined in [RFC2863]. Note that ifIndex
+                values are not assigned statically to an interface
+                and that the interfaces may be renumbered every time
+                the device's management system is re-initialized,
+                as specified in [RFC2863].
+
+7.81.  interfaceMacAddress
+
    elementId: TBD
    name: interfaceMacAddress
    dataType: macAddress
@@ -2193,7 +2265,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The IEEE 802 MAC address associated with a network
                 interface on an endpoint.
 
-7.77.  interfaceType
+7.82.  interfaceType
 
    elementId: TBD
    name: interfaceType
@@ -2203,7 +2275,28 @@ Internet-Draft           SACM Information Model           September 2016
                 the value of managed object 'ifType' as defined in
                 [IANA registry ianaiftype-mib].
 
-7.78.  interfaceFlags
+7.83.  interfaceFlags
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 41]
+
+Internet-Draft           SACM Information Model           September 2016
+
 
 elementId: TBD
 name: interfaceFlags
@@ -2222,25 +2315,7 @@ structure: Up                  ; 0x1   ; Interface is up.
            No ARP              ; 0x80  ; No address resolution protocol.
            Receive all         ; 0x100 ; Receive all packets.
 
-7.79.  networkInterface
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 40]
-
-Internet-Draft           SACM Information Model           September 2016
-
+7.84.  networkInterface
 
    elementId: TBD
    name: networkInterface
@@ -2255,7 +2330,7 @@ Internet-Draft           SACM Information Model           September 2016
    structure: orderedList(interfaceName, interfaceIndex, macAddress,
                           ifType, flags)
 
-7.80.  globallyUniqueIdentifier
+7.85.  globallyUniqueIdentifier
 
    elementId: TBD
    name: globallyUniqueIdentifier
@@ -2264,7 +2339,20 @@ Internet-Draft           SACM Information Model           September 2016
    metadata: true
    description: TODO.
 
-7.81.  dataOrigin
+7.86.  dataOrigin
+
+
+
+
+
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 42]
+
+Internet-Draft           SACM Information Model           September 2016
+
 
    elementId: TBD
    name: dataOrigin
@@ -2273,7 +2361,7 @@ Internet-Draft           SACM Information Model           September 2016
    metadata: true
    description: The origin of the data.
 
-7.82.  dataSource
+7.87.  dataSource
 
    elementId: TBD
    name: dataSource
@@ -2282,21 +2370,7 @@ Internet-Draft           SACM Information Model           September 2016
    metadata: true
    description: The source of the data.
 
-7.83.  creationTimestamp
-
-
-
-
-
-
-
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 41]
-
-Internet-Draft           SACM Information Model           September 2016
-
+7.88.  creationTimestamp
 
    elementId: TBD
    name: creationTimestamp
@@ -2306,7 +2380,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The date and time when the posture
                 information was created by a SACM Component.
 
-7.84.  collectionTimestamp
+7.89.  collectionTimestamp
 
    elementId: TBD
    name: collectionTimestamp
@@ -2317,7 +2391,7 @@ Internet-Draft           SACM Information Model           September 2016
                 information was collected or observed by a SACM
                 Component.
 
-7.85.  publicationTimestamp
+7.90.  publicationTimestamp
 
    elementId: TBD
    name: publicationTimestamp
@@ -2327,7 +2401,16 @@ Internet-Draft           SACM Information Model           September 2016
    description: The date and time when the posture
                 information was published.
 
-7.86.  relayTimestamp
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 43]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+7.91.  relayTimestamp
 
    elementId: TBD
    name: relayTimestamp
@@ -2337,7 +2420,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The date and time when the posture
                 information was relayed to another SACM Component.
 
-7.87.  storageTimestamp
+7.92.  storageTimestamp
 
    elementId: TBD
    name: storageTimestamp
@@ -2347,14 +2430,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The date and time when the posture
                 information was stored in a Repository.
 
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 42]
-
-Internet-Draft           SACM Information Model           September 2016
-
-
-7.88.  type
+7.93.  type
 
    elementId: TBD
    name: type
@@ -2366,7 +2442,7 @@ Internet-Draft           SACM Information Model           September 2016
                 table lists the set of data models supported by SACM.
    structure: TBD
 
-7.89.  protocolIdentifier
+7.94.  protocolIdentifier
 
    elementId: TBD
    name: protocolIdentifier
@@ -2382,7 +2458,15 @@ Internet-Draft           SACM Information Model           September 2016
                 version 6 (IPv6), this is carried in the Next Header
                 field in the last extension header of the packet.
 
-7.90.  sourceTransportPort
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 44]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+7.95.  sourceTransportPort
 
    elementId: TBD
    name: sourceTransportPort
@@ -2395,20 +2479,7 @@ Internet-Draft           SACM Information Model           September 2016
                 transport protocols that have 16-bit source port
                 identifiers.
 
-7.91.  sourceIPv4PrefixLength
-
-
-
-
-
-
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 43]
-
-Internet-Draft           SACM Information Model           September 2016
-
+7.96.  sourceIPv4PrefixLength
 
    elementId: TBD
    name: sourceIPv4PrefixLength
@@ -2417,7 +2488,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The number of contiguous bits that are relevant in
                 the sourceIPv4Prefix Information Element.
 
-7.92.  ingressInterface
+7.97.  ingressInterface
 
    elementId: TBD
    name: ingressInterface
@@ -2431,7 +2502,7 @@ Internet-Draft           SACM Information Model           September 2016
                 may be renumbered every time the device's management
                 system is re-initialized, as specified in [RFC2863].
 
-7.93.  destinationTransportPort
+7.98.  destinationTransportPort
 
    elementId: TBD
    name: destinationTransportPort
@@ -2444,7 +2515,14 @@ Internet-Draft           SACM Information Model           September 2016
                 for future transport protocols that have 16-bit
                 destination port identifiers.
 
-7.94.  sourceIPv6PrefixLength
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 45]
+
+Internet-Draft           SACM Information Model           September 2016
+
+
+7.99.  sourceIPv6PrefixLength
 
    elementId: TBD
    name: sourceIPv6PrefixLength
@@ -2453,18 +2531,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The number of contiguous bits that are relevant in
                 the sourceIPv6Prefix Information Element.
 
-7.95.  sourceIPv4Prefix
-
-
-
-
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 44]
-
-Internet-Draft           SACM Information Model           September 2016
-
+7.100.  sourceIPv4Prefix
 
    elementId: TBD
    name: sourceIPv4Prefix
@@ -2472,7 +2539,7 @@ Internet-Draft           SACM Information Model           September 2016
    status: current
    description: IPv4 source address prefix.
 
-7.96.  destinationIPv4Prefix
+7.101.  destinationIPv4Prefix
 
    elementId: TBD
    name: destinationIPv4Prefix
@@ -2480,7 +2547,7 @@ Internet-Draft           SACM Information Model           September 2016
    status: current
    description: IPv4 destination address prefix.
 
-7.97.  sourceMacAddress
+7.102.  sourceMacAddress
 
    elementId: TBD
    name: sourceMacAddress
@@ -2488,7 +2555,7 @@ Internet-Draft           SACM Information Model           September 2016
    status: current
    description: The IEEE 802 source MAC address field.
 
-7.98.  ipVersion
+7.103.  ipVersion
 
    elementId: TBD
    name: ipVersion
@@ -2496,7 +2563,20 @@ Internet-Draft           SACM Information Model           September 2016
    status: current
    description: The IP version field in the IP packet header.
 
-7.99.  interfaceDescription
+7.104.  interfaceDescription
+
+
+
+
+
+
+
+
+
+Waltermire, et al.        Expires March 5, 2017                [Page 46]
+
+Internet-Draft           SACM Information Model           September 2016
+
 
    elementId: TBD
    name: interfaceDescription
@@ -2506,21 +2586,7 @@ Internet-Draft           SACM Information Model           September 2016
                 1/0" or "ISP
    connection".
 
-7.100.  exporterIPv4Address
-
-
-
-
-
-
-
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 45]
-
-Internet-Draft           SACM Information Model           September 2016
-
+7.105.  exporterIPv4Address
 
    elementId: TBD
    name: exporterIPv4Address
@@ -2531,7 +2597,7 @@ Internet-Draft           SACM Information Model           September 2016
                 Exporter in cases where the identity of the Exporter
                 may have been obscured by the use of a proxy.
 
-7.101.  exporterIPv6Address
+7.106.  exporterIPv6Address
 
    elementId: TBD
    name: exporterIPv6Address
@@ -2543,7 +2609,7 @@ Internet-Draft           SACM Information Model           September 2016
                 Exporter may have been obscured by the use of a
                 proxy.
 
-7.102.  portId
+7.107.  portId
 
    elementId: TBD
    name: portId
@@ -2554,7 +2620,7 @@ Internet-Draft           SACM Information Model           September 2016
                 Typically, this Information Element is used for
                 limiting the scope of other Information Elements.
 
-7.103.  templateId
+7.108.  templateId
 
 
 
@@ -2563,17 +2629,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-
-
-
-
-
-
-
-
-
-
-Waltermire, et al.        Expires March 5, 2017                [Page 46]
+Waltermire, et al.        Expires March 5, 2017                [Page 47]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -2596,7 +2652,7 @@ Internet-Draft           SACM Information Model           September 2016
                 Note that after a re-start of the Exporting Process
                 Template identifiers may be re-assigned.
 
-7.104.  collectorIPv4Address
+7.109.  collectorIPv4Address
 
    elementId: TBD
    name: collectorIPv4Address
@@ -2605,7 +2661,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: An IPv4 address to which the Exporting Process sends
                 Flow information.
 
-7.105.  collectorIPv6Address
+7.110.  collectorIPv6Address
 
    elementId: TBD
    name: collectorIPv6Address
@@ -2614,7 +2670,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: An IPv6 address to which the Exporting Process sends
                 Flow information.
 
-7.106.  interface
+7.111.  interface
 
    elementId: TBD
    name: interface
@@ -2629,12 +2685,12 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 47]
+Waltermire, et al.        Expires March 5, 2017                [Page 48]
 
 Internet-Draft           SACM Information Model           September 2016
 
 
-7.107.  interfaceName
+7.112.  interfaceName
 
    elementId: TBD
    name: interfaceName
@@ -2643,7 +2699,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The interface
          name.
 
-7.108.  physicalProtocol
+7.113.  physicalProtocol
 
    elementId: TBD
    name: physicalProtocol
@@ -2685,7 +2741,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 48]
+Waltermire, et al.        Expires March 5, 2017                [Page 49]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -2714,7 +2770,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The physical layer protocol used by the AF_PACKET
    socket.
 
-7.109.  hwAddress
+7.114.  hwAddress
 
    elementId: TBD
    name: hwAddress
@@ -2723,7 +2779,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The hardware address associated
          with the interface.
 
-7.110.  transportProtocol
+7.115.  transportProtocol
 
    elementId: TBD
    name: transportProtocol
@@ -2732,7 +2788,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: The transport-layer
          protocol (tcp or udp).
 
-7.111.  localAddress
+7.116.  localAddress
 
 
 
@@ -2741,7 +2797,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 49]
+Waltermire, et al.        Expires March 5, 2017                [Page 50]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -2753,7 +2809,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: This is the IP address being listened to. Note that
    the IP address can be IPv4 or IPv6.
 
-7.112.  localPort
+7.117.  localPort
 
    elementId: TBD
    name: localPort
@@ -2762,7 +2818,7 @@ Internet-Draft           SACM Information Model           September 2016
    description: This is the TCP or UDP port
          being listened to.
 
-7.113.  localFullAddress
+7.118.  localFullAddress
 
    elementId: TBD
    name: localFullAddress
@@ -2772,7 +2828,7 @@ Internet-Draft           SACM Information Model           September 2016
    listens, including the local address and the local port. Note
    that the IP address can be IPv4 or IPv6.
 
-7.114.  foreignAddress
+7.119.  foreignAddress
 
    elementId: TBD
    name: foreignAddress
@@ -2782,7 +2838,7 @@ Internet-Draft           SACM Information Model           September 2016
    communicating, or with which it will communicate. Note that the
    IP address can be IPv4 or IPv6.
 
-7.115.  foreignFullAddress
+7.120.  foreignFullAddress
 
    elementId: TBD
    name: foreignFullAddress
@@ -2797,7 +2853,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 50]
+Waltermire, et al.        Expires March 5, 2017                [Page 51]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -2853,7 +2909,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 51]
+Waltermire, et al.        Expires March 5, 2017                [Page 52]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -2909,7 +2965,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 52]
+Waltermire, et al.        Expires March 5, 2017                [Page 53]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -2965,7 +3021,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 53]
+Waltermire, et al.        Expires March 5, 2017                [Page 54]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -3021,7 +3077,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 54]
+Waltermire, et al.        Expires March 5, 2017                [Page 55]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -3077,7 +3133,7 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 55]
+Waltermire, et al.        Expires March 5, 2017                [Page 56]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -3133,7 +3189,7 @@ A.1.  Changes in Revision 01
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 56]
+Waltermire, et al.        Expires March 5, 2017                [Page 57]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -3189,7 +3245,7 @@ A.3.  Changes in Revision 03
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 57]
+Waltermire, et al.        Expires March 5, 2017                [Page 58]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -3245,7 +3301,7 @@ A.6.  Changes in Revision 06
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 58]
+Waltermire, et al.        Expires March 5, 2017                [Page 59]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -3301,7 +3357,7 @@ Authors' Addresses
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 59]
+Waltermire, et al.        Expires March 5, 2017                [Page 60]
 
 Internet-Draft           SACM Information Model           September 2016
 
@@ -3357,4 +3413,4 @@ Internet-Draft           SACM Information Model           September 2016
 
 
 
-Waltermire, et al.        Expires March 5, 2017                [Page 60]
+Waltermire, et al.        Expires March 5, 2017                [Page 61]

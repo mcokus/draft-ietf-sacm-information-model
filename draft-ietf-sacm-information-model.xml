@@ -972,6 +972,84 @@ name, hex-value, description
         <section title="Information Model Elements" anchor="information-model-elements">
             <t>This section defines the specific Information Elements and relationships that will be 
             implemented by data models and transported between SACM Components.</t>
+            
+            <section title="componentIdentifier">
+                <figure>
+                    <artwork>
+                        elementId: TBD
+                        name: componentIdentifier
+                        dataType: list
+                        status: current
+                        description: 
+                    </artwork>
+                </figure>
+            </section> 
+            
+            <section title="targetEndpointIdentifier">
+                <figure>
+                    <artwork>
+                        elementId: TBD
+                        name: targetEndpointIdenitifer
+                        dataType: categgory (
+                        targetEndpointIdenitiferLabel |
+                        targetEndpointIdenitiferAttributes)
+                        status: current
+                        description: The identifier of a target 
+                        endpoint. This may be a label unique to 
+                        a SACM domain or a set of attributes that
+                        can be used to identify an endpoint on a 
+                        network.
+                    </artwork>
+                </figure>
+            </section> 
+            
+            <section title="collectedData">
+                <figure>
+                    <artwork>
+                        elementId: TBD
+                        name: collectedData
+                        dataType:
+                        status: current
+                        description: The set of bytes
+                        representing the collected data.
+                    </artwork>
+                </figure>
+            </section> 
+            
+            <section title="collectedDataType">
+                <figure>
+                    <artwork>
+                        elementId: TBD
+                        name: collectedDataType
+                        dataType: enumeration
+                        IPFIX ; 0x1 ; The collected data 
+                                      conforms to IPFIX
+                        WMI   ; 0x2 ; 
+                        SWID  ; 0x3 ; 
+                        OVAL  ; 0x4 ; 
+                        
+                        status: current
+                        description: The collection protocol to 
+                        which the collected data conforms.  
+                        
+                    </artwork>
+                </figure>
+            </section> 
+            
+            <section title="collectedDataReference">
+                <figure>
+                    <artwork>
+                        elementId: TBD
+                        name: collectedDataReference
+                        dataType: category (URL |
+                        repsitoryName...
+                        status: current
+                        description: The set of bytes
+                        representing the collected data.
+                    </artwork>
+                </figure>
+            </section> 
+            
 <section title="accessPrivilegeType">
     <figure>
       <artwork type="IPFIX">
