@@ -58,7 +58,7 @@
 <?rfc subcompact="no" ?>
 <!-- keep one blank line between list items -->
 <!-- end of list of popular I-D processing instructions -->
-<rfc category="std" docName="draft-ietf-sacm-information-model-07" ipr="trust200902">
+<rfc category="std" docName="draft-ietf-sacm-information-model-??" ipr="trust200902">
     <!-- category values: std, bcp, info, exp, and historic
      ipr values: full3667, noModification3667, noDerivatives3667
      you can add the attributes updates="NNNN" and obsoletes="NNNN" 
@@ -433,6 +433,33 @@
                 
             </section>
         </section>
+        <section title="Predefined SACM Subjects">
+            
+            <t>The SACM IM provides two conceptual top-level subjects that are used
+            to ensure a homogeneous structure for SACM content and its associated
+            metadata: SACM statements and SACM content elements.  Every set of
+            IEs that is provided by a SACM component must provide the information
+            contained in these two subjects although it is up to the implementer
+            whether or not the subjects are explicitly defined in a data model.</t>
+            
+            <t>In general, every piece of information that enables security posture
+            assessment or further enriches the quality of the assessment process
+            can be associated with metadata.  In the SACM IM, metadata is
+            represented by special, predefined subjects and is bundled with other attributes
+            or subjects to provide additional information about them.  The IM
+            explicitly defines two kinds of metadata: sacmMetadata, focusing on the data origin (the SACM component that
+            provides the information to the SACM domain), and contentMetadata, focusing on the data source (the target endpoint that is
+            assessed).</t>
+            
+            <t>Metadata can also include relationships that refer to other
+            associated IEs (or SACM content in general) by using referencing
+            labels that have to be included in the metadata of the associated IE.</t>
+            
+            <t>Lastly, event subjects provide a structure to represent the change of IE
+            values that was detected by a collection task at a specific point of
+            time.</t>  
+            
+            
             <section title="SACM Content Elements"
                 anchor="sacm-content-elements">
                 <t>Every piece of information that is provided by a SACM component is always associated 
@@ -443,18 +470,15 @@
                     content-element. Content metadata can also include relationships that express associations 
                     with other content-elements.</t>
                 
-                <figure title="Example set of IEs associated with a timestamp and a
+                <figure title="Example of collected data associated with a timestamp and a
                     target endpoint label." anchor="sacm-content-element-example">
                     <artwork>                  
-            content-element = (
-              content-metadata = (
-                collection-timestamp = 146193322,
-                data-source = fb02e551-7101-4e68-8dec-1fde6bd10981
+            contentElement = (
+              contentMetadata = (
+                collectionTimestamp = 146193322,
+                dataSource = fb02e551-7101-4e68-8dec-1fde6bd10981
               ),
-              hostname = "arbutus",
-              coordinates = (
-              latitude = N27.99619,
-              longitude = E86.92761
+              collectedData
               )
             )
                     </artwork>
@@ -476,64 +500,34 @@
                     provided by a SACM component might not be correct in every context, but rather is the result 
                     of a best-effort to produce correct information.</t>
                 
-                <figure title="Example of a simple SACM statement including a single content-element." anchor="sacm-statement-example-1">
+                <figure title="Example of a simple SACM statement
+                    including content elements." anchor="sacm-statement-example-1">
                     <artwork>                  
-            sacm-statement = (
-              statement-metadata = (
-                publish-timestamp = 1461934031,
-                data-origin = 24e67957-3d31-4878-8892-da2b35e121c2,
+            sacmStatement = (
+              statementMetadata = (
+                publishTimestamp = 1461934031,
+                dataOrigin = 24e67957-3d31-4878-8892-da2b35e121c2,
                 content-type = observation
               ),
-              content-element = (
-                content-metadata = (
-                  collection-timestamp = 146193322,
-                  data-source = fb02e551-7101-4e68-8dec-1fde6bd10981
+              contentElement = (
+                contentMetadata = (
+                  collectionTimestamp = 146193322,
+                  dataSource = fb02e551-7101-4e68-8dec-1fde6bd10981
                 ),
-                hostname = "arbutus"
+                collectedData
+              )
+              contentElement = (
+                contentMetadata = (
+                  collectionTimestamp = 146193324,
+                  dataSource = fb02e001-7104-4e68-8dec-1fde6bd10981
+                ),
+                collectedData
               )
             )
                     </artwork>
                 </figure>
                 
-                <figure title="Example of conflicting information originating from different SACM components." anchor="sacm-statement-example-2">
-                    <artwork>                  
-            sacm-statement = (
-              statement-metadata = (
-                publish-timestamp = 1461934031,
-                data-origin = 24e67957-3d31-4878-8892-da2b35e121c2
-                content-type = observation
-              ),
-              content-element = (
-                content-metadata = (
-                  collection-timestamp = 146193322,
-                  data-source = fb02e551-7101-4e68-8dec-1fde6bd10981
-                ),
-                coordinates = (
-                  latitude = N27.99619,
-                  longitude = E86.92761
-                )
-              )
-            )
-            
-            sacm-statement = (
-              statement-metadata = (
-                publish-timestamp = 1461934744,
-                data-origin = e42885a1-0270-44e9-bb5c-865cf6bd4800,
-                content-type = observation
-              ),
-              content-element = (
-                content-metadata = (
-                  collection-timestamp = 146193821,
-                  te-label = fb02e551-7101-4e68-8dec-1fde6bd10981
-                ),
-                coordinates = (
-                  latitude = N16.67622,
-                  longitude = E141.55321
-                )
-              )
-            )
-                    </artwork>
-                </figure>
+
             </section>
             
             <section title="Relationships" anchor="relationships">
@@ -565,26 +559,24 @@
                 <figure title="Example instance of a content-element subject associated with 
                     another subject via its content metadata." anchor="sacm-relationship-example">
                     <artwork>                  
-            content-element = (
-              content-metadata = (
-                collection-timestamp = 1461934031,
-                te-label = 
+            contentElement = (
+              contentMetadata = (
+                collectionTimestamp = 1461934031,
+                teLabel = 
                 fb02e551-7101-4e68-8dec-1fde6bd10981
                 relationships = (
                   associated-with-user-account = 
                   f3d70ef4-7e18-42af-a894-8955ba87c95d
                 )
               ),
-              hostname = "arbutus"
+              collectedData
             )
             
-            content-element = (
-              content-metadata = (
-                content-label = f3d70ef4-7e18-42af-a894-8955ba87c95d
+            contentElement = (
+              contentMetadata = (
+                contentLabel = f3d70ef4-7e18-42af-a894-8955ba87c95d
               ),
-              user-account = (
-                username = romeo
-                authentication = local
+              collectedData
               )
             )  
                     </artwork>
@@ -606,32 +598,32 @@
                 </t>
                 <figure title="Example of a SACM statement containing an event." anchor="sacm-event-example">
                     <artwork>                  
-        sacm-statement = (
-          statement-metadata = (
-            publish-timestamp = 1461934031,
-            data-origin = 24e67957-3d31-4878-8892-da2b35e121c2,
-            content-type = event
+        sacmStatement = (
+          statementMetadata = (
+            publishTimestamp = 1461934031,
+            dataOrigin = 24e67957-3d31-4878-8892-da2b35e121c2,
+            contentType = event
           ),
           event = (
-            event-attributes = (
-              event-name = "host-name change",
-              content-element = (
-                content-metadata = (
-                collection-timestamp = 146193322,
-                data-source = 
+            eventAttributes = (
+              eventName = "host-name change",
+              contentElement = (
+                contentMetadata = (
+                collectionTimestamp = 146193322,
+                dataSource = 
                   fb02e551-7101-4e68-8dec-1fde6bd10981,
-                  event-component = past-state
+                  eventComponent = past-state
                ),
-               hostname = "arbutus"
+               collectedData
               ),
-              content-element = (
-                content-metadata = (
-                  collection-timestamp = 146195723,
-                  data-source = 
+              contentElement = (
+                contentMetadata = (
+                  collectionTimestamp = 146195723,
+                  dataSource = 
                   fb02e551-7101-4e68-8dec-1fde6bd10981,
-                  event-component = current-state
+                  eventComponent = current-state
                 ),
-                hostname = "lilac"
+                collectedData
               )
             )
           )  
@@ -640,7 +632,7 @@
             </section>
             
 
-        
+        </section> 
         
         <section title="Abstract Data Types" anchor="abstract-data-types">
             <t>This section describes the set of valid abstract data types that 
